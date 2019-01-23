@@ -1,0 +1,23 @@
+#pink {
+    background-color:lightpink;
+}
+
+#blue {
+    background-color:lightblue; 
+    text-align:center;
+}
+
+.pills {
+    color: black;
+    font-weight: bold;
+    background-color: grey;
+}
+
+.margina1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.margina2 {
+    margin-bottom: 10px;
+}

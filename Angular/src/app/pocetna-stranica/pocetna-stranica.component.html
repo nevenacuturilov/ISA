@@ -1,45 +1,52 @@
 <div class="container-fluid h-100">
+
   <div class="row h-100">
-    <div class="col-2" style="background-color:lightpink">
-      <ul class="nav nav-tabs flex-column">
-          <li class="nav-item">
-              <a class="nav-link " href="#">Home</a>
-            </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#">Avio kompanije</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Letovi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Slobodna mesta</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Hoteli</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Rent-a-car servisi</a>
-        </li>
+
+    <div id="pink" class="col-2">
+
+      <ul class="nav nav-pills flex-column">
+          <li class="nav-item margina1">
+            <a class="nav-link pills" href="#">Pocetna stranica</a>
+          </li>
+          <li class="nav-item margina2">
+            <a class="nav-link pills" href="#">Avio kompanije</a>
+          </li>
+          <li class="nav-item margina2">
+            <a class="nav-link pills" href="#">Letovi</a>
+          </li>
+          <li class="nav-item margina2">
+            <a class="nav-link pills" href="#">Slobodna mesta</a>
+          </li>
+          <li class="nav-item margina2">
+            <a class="nav-link pills" href="#">Hoteli</a>
+          </li>
+          <li class="nav-item margina2">
+            <a class="nav-link pills" href="#">Rent-a-car servisi</a>
+          </li>
       </ul>
-    </div>
-    <div class="col-10" style="background-color:lightblue; text-align:center">
-      <router-outlet></router-outlet>
-      <br>
-      <form>
+
+      </div>
+
+      <!--br da se zamene marginama i da se login sredi i registracija isto-->
+      <div id="blue" class="col-10">
+        <br>
+        <form>
+          <p>Prijava:</p>
           <div class="form-group">
-            <label>Email: </label>
-            <input type="text">
+            <input type="text" placeholder="Korisnicko ime">
           </div>
           <div class="form-group">
-            <label>Password: </label>
-            <input type="password">
+            <input type="password" placeholder="Lozinka">
           </div>
         </form>
-      <br>
-      <button type="button" class="btn btn-danger">Prijava</button>
-      <br/><br/>
-      <a href="">Registracija</a>
-    </div>
+        <br>
+        <button type="button" class="btn btn-danger">Prijava</button>
+        <br/>
+        <br/>
+        <p>Niste registrovani? <a href="">Registracija</a></p> 
+      </div>
+
   </div>
+
 </div>
 

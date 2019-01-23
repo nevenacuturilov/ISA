@@ -1,5 +1,10 @@
-img.resize {
-    width:10%;
-    height:10%;
-  }
+#yellow {
+  background-color: rgb(253, 252, 184);
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
 
