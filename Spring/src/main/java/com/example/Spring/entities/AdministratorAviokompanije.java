@@ -1,4 +1,4 @@
-package com.example.Spring.Entities;
+package com.example.Spring.entities;
 
 public class AdministratorAviokompanije {
 
