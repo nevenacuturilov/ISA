@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PocetnaStranicaComponent } from './pocetna-stranica/pocetna-stranica.component';
+import { PocetnaStranicaComponent } from './components/pocetna-stranica/pocetna-stranica.component';
+import { KorisnikService } from './services/korisnik.service';
+
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { PocetnaStranicaComponent } from './pocetna-stranica/pocetna-stranica.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [KorisnikService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
