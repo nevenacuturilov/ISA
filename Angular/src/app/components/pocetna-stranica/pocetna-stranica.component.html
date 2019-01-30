@@ -44,7 +44,27 @@
         <br/>
         <br/>
         <p>Niste registrovani? <a href="">Registracija</a></p> 
-      </div>
+
+
+        <table class="table table-striped">
+          <thead>
+              <th>Id</th>
+              <th>Korisnicko ime</th>
+              <th>Lozinka</th>
+              <th>Operacija </th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let korisnik of korisnici">
+                  <td>{{korisnik.id}}</td>
+                  <td>{{korisnik.username}}</td>
+                  <td>{{korisnik.password}}</td>
+                  <td><button class="btn btn-danger">Delete</button>
+                      <button class="btn btn-primary">Edit</button></td>
+              </tr>
+          </tbody>
+      </table>
+      <button class="btn btn-primary">New User</button>
+      </div>       
 
   </div>
 
