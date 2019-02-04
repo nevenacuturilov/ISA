@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions} from '@angular/http';
-import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { Korisnik } from '../korisnik';
@@ -11,14 +10,11 @@ import { Korisnik } from '../korisnik';
 export class KorisnikService {
 
   private url = 'http://localhost:8080/api';
-  headers = new Headers({'Content-Type': 'application/json'});
-  // headers.append('Access-Control-Allow-Origin', '*');
+  private headers = new Headers({'Content-Type': 'application/json'});
   private options = new RequestOptions({headers: this.headers});
   private korisnik = new Korisnik();
 
   constructor(private http: Http) {
-    console.log(this.options);
-    console.log('Ovdeeee');
    }
 
   setter(korisnik: Korisnik) {
@@ -30,7 +26,6 @@ export class KorisnikService {
   }
 
   getUsers() {
-    console.log('33333');
     return this.http.get(this.url + '/korisnici', this.options)
       .pipe(map((response: Response) => response.json()))
         .pipe(catchError(this.errorHandler));

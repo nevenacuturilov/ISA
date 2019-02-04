@@ -17,6 +17,7 @@ public class KorisnikController {
 
     @GetMapping("/korisnici")
     public List<Korisnik> getKorisnici(){
+
         return korisnikRepository.findAll();
     }
 
@@ -34,11 +35,14 @@ public class KorisnikController {
     
     @PostMapping("/korisnik")
 	public Korisnik createKorisnik(@RequestBody Korisnik korisnik) {
-		return korisnikRepository.save(korisnik);
+
+        return korisnikRepository.save(korisnik);
 	}
+
     @PutMapping("/korisnik")
 	public Korisnik updateKorisnik(@RequestBody Korisnik korisnik) {
-		return korisnikRepository.save(korisnik);
+
+        return korisnikRepository.save(korisnik);
 	}
 
 }

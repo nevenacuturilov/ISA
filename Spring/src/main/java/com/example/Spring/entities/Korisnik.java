@@ -10,7 +10,7 @@ public class Korisnik {
     @Id
     @GeneratedValue
     private Integer id;
-    private String email;
+    private String username;
     private String password;
     private String ime;
     private String prezime;
@@ -22,12 +22,12 @@ public class Korisnik {
     }
     
     public Korisnik(String email, String password) {
-        this.email = email;
+        this.username = email;
         this.password = password;
     }
 
     public Korisnik(String email, String password, String ime, String prezime, String grad, String brojTelefona) {
-        this.email = email;
+        this.username = email;
         this.password = password;
         this.ime = ime;
         this.prezime = prezime;
@@ -45,14 +45,14 @@ public class Korisnik {
         this.id = id;
     }
 
-    public String getEmail() {
+    public String getUsername() {
 
-        return email;
+        return username;
     }
 
-    public void setEmail(String email) {
+    public void setUsername(String username) {
 
-        this.email = email;
+        this.username = username;
     }
 
     public String getPassword() {

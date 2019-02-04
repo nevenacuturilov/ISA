@@ -6,22 +6,22 @@
 
       <ul class="nav nav-pills flex-column">
           <li class="nav-item margina1">
-            <a class="nav-link pills" href="#">Pocetna stranica</a>
+            <a class="nav-link pills" href="">Pocetna stranica</a>
           </li>
           <li class="nav-item margina2">
-            <a class="nav-link pills" href="#">Avio kompanije</a>
+            <a class="nav-link pills" routerLink="/avio-kompanije">Avio kompanije</a>
           </li>
           <li class="nav-item margina2">
-            <a class="nav-link pills" href="#">Letovi</a>
+            <a class="nav-link pills" routerLink="/letovi">Letovi</a>
           </li>
           <li class="nav-item margina2">
-            <a class="nav-link pills" href="#">Slobodna mesta</a>
+            <a class="nav-link pills" routerLink="/pocetna-stranica/letovi">Slobodna mesta</a>
           </li>
           <li class="nav-item margina2">
-            <a class="nav-link pills" href="#">Hoteli</a>
+            <a class="nav-link pills" routerLink="/hoteli">Hoteli</a>
           </li>
           <li class="nav-item margina2">
-            <a class="nav-link pills" href="#">Rent-a-car servisi</a>
+            <a class="nav-link pills" routerLink="/rent-a-car-servisi">Rent-a-car servisi</a>
           </li>
       </ul>
 
@@ -33,20 +33,20 @@
         <form>
           <p>Prijava:</p>
           <div class="form-group">
-            <input type="text" placeholder="Korisnicko ime">
+            <input class="form-control" type="text" [(ngModel)]="k.username" name="username" placeholder="Korisnicko ime">
           </div>
           <div class="form-group">
-            <input type="password" placeholder="Lozinka">
+            <input class="form-control" type="password" [(ngModel)]="k.password" name="password" placeholder="Lozinka">
           </div>
         </form>
         <br>
-        <button type="button" class="btn btn-danger">Prijava</button>
+        <button type="button" class="btn btn-danger" (click)="prijava()">Prijava</button>
         <br/>
         <br/>
         <p>Niste registrovani? <a href="">Registracija</a></p> 
 
 
-        <table class="table table-striped">
+        <!--<table class="table table-striped">
           <thead>
               <th>Id</th>
               <th>Korisnicko ime</th>
@@ -63,7 +63,7 @@
               </tr>
           </tbody>
       </table>
-      <button class="btn btn-primary">New User</button>
+      <button class="btn btn-primary">New User</button>-->
       </div>       
 
   </div>

@@ -5,17 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PocetnaStranicaComponent } from './components/pocetna-stranica/pocetna-stranica.component';
 import { KorisnikService } from './services/korisnik.service';
-
+import { FormsModule } from '@angular/forms';
+import { ProfilComponent } from './components/profil/profil.component';
+import { AvioKompanijeComponent } from './components/avio-kompanije/avio-kompanije.component';
+import { LetoviComponent } from './components/letovi/letovi.component';
+import { HoteliComponent } from './components/hoteli/hoteli.component';
+import { RentACarServisiComponent } from './components/rent-a-car-servisi/rent-a-car-servisi.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PocetnaStranicaComponent
+    PocetnaStranicaComponent,
+    ProfilComponent,
+    AvioKompanijeComponent,
+    LetoviComponent,
+    HoteliComponent,
+    RentACarServisiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [KorisnikService],
   bootstrap: [AppComponent]
