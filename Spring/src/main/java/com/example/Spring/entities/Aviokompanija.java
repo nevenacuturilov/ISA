@@ -1,21 +1,24 @@
 package com.example.Spring.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Aviokompanija {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    //@Column(nullable=false)
     private Integer id;
     private String naziv;
     private String adresa; //razloziti?
     private String promotivniOpis;
-    private ArrayList<String> destinacije;
-    private ArrayList<Let> letovi;
+    @ElementCollection(targetClass=String.class)
+    private List<String> destinacije  = new ArrayList<String>();
+    @OneToMany(mappedBy = "a", fetch = FetchType.LAZY)
+    //@OneToMany(cascade= CascadeType.ALL)
+    private List<Let> letovi = new ArrayList<Let>();
     private String spisakKarata; //??
     private String konfiguracija; //??
     private String cenovnik; //??
@@ -24,7 +27,7 @@ public class Aviokompanija {
     public Aviokompanija() {
     }
 
-    public Aviokompanija(String naziv, String adresa, String promotivniOpis, ArrayList<String> destinacije, ArrayList<Let> letovi,
+    public Aviokompanija(String naziv, String adresa, String promotivniOpis, List<String> destinacije, List<Let> letovi,
                          String spisakKarata, String konfiguracija, String cenovnik, String prtljag) {
         this.naziv = naziv;
         this.adresa = adresa;
@@ -69,7 +72,7 @@ public class Aviokompanija {
         this.promotivniOpis = promotivniOpis;
     }
 
-    public ArrayList<String> getDestinacije() {
+    public List<String> getDestinacije() {
         return destinacije;
     }
 
@@ -77,7 +80,7 @@ public class Aviokompanija {
         this.destinacije = destinacije;
     }
 
-    public ArrayList<Let> getLetovi() {
+    public List<Let> getLetovi() {
         return letovi;
     }
 

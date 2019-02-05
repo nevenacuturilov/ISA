@@ -1,9 +1,8 @@
 package com.example.Spring.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Let {
@@ -18,14 +17,33 @@ public class Let {
     private String vremePutovanja;
     private String duzinaPutovanja;
     private Integer brojPresedanja;
-    private ArrayList<String> lokacijePresedanja;
+    @ElementCollection(targetClass=String.class)
+    private List<String> lokacijePresedanja;
     private Integer cenaKarte;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="aid",referencedColumnName="id", insertable=false, updatable=false)
+    private Aviokompanija a;
+
+    public void setLokacijePresedanja(List<String> lokacijePresedanja) {
+        this.lokacijePresedanja = lokacijePresedanja;
+    }
+
+    public Aviokompanija getA() {
+        return a;
+    }
+
+    public void setA(Aviokompanija a) {
+        this.a = a;
+    }
+
+
 
     public Let() {
     }
 
     public Let(String datumPoletanja, String vremePoletanja, String datumSletanja, String vremeSletanja, String vremePutovanja,
-               String duzinaPutovanja, Integer brojPresedanja, ArrayList<String> lokacijePresedanja, Integer cenaKarte) {
+               String duzinaPutovanja, Integer brojPresedanja, List<String> lokacijePresedanja, Integer cenaKarte) {
         this.datumPoletanja = datumPoletanja;
         this.vremePoletanja = vremePoletanja;
         this.datumSletanja = datumSletanja;
@@ -101,7 +119,7 @@ public class Let {
         this.brojPresedanja = brojPresedanja;
     }
 
-    public ArrayList<String> getLokacijePresedanja() {
+    public List<String> getLokacijePresedanja() {
         return lokacijePresedanja;
     }
 

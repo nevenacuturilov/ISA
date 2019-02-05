@@ -21,13 +21,13 @@ public class Korisnik {
     public Korisnik() {    	
     }
     
-    public Korisnik(String email, String password) {
-        this.username = email;
+    public Korisnik(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 
-    public Korisnik(String email, String password, String ime, String prezime, String grad, String brojTelefona) {
-        this.username = email;
+    public Korisnik(String username, String password, String ime, String prezime, String grad, String brojTelefona) {
+        this.username = username;
         this.password = password;
         this.ime = ime;
         this.prezime = prezime;
@@ -66,34 +66,42 @@ public class Korisnik {
     }
 
     public String getIme() {
+
         return ime;
     }
 
     public void setIme(String ime) {
+
         this.ime = ime;
     }
 
     public String getPrezime() {
+
         return prezime;
     }
 
     public void setPrezime(String prezime) {
+
         this.prezime = prezime;
     }
 
     public String getGrad() {
+
         return grad;
     }
 
     public void setGrad(String grad) {
+
         this.grad = grad;
     }
 
     public String getBrojTelefona() {
+
         return brojTelefona;
     }
 
     public void setBrojTelefona(String brojTelefona) {
+
         this.brojTelefona = brojTelefona;
     }
 }

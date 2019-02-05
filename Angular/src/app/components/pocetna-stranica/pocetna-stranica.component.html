@@ -6,65 +6,27 @@
 
       <ul class="nav nav-pills flex-column">
           <li class="nav-item margina1">
-            <a class="nav-link pills" href="">Pocetna stranica</a>
+            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'prijava'}}]">Pocetna stranica</a>
           </li>
           <li class="nav-item margina2">
-            <a class="nav-link pills" routerLink="/avio-kompanije">Avio kompanije</a>
+            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'avio-kompanije'}}]">Aviokompanije</a>
           </li>
           <li class="nav-item margina2">
-            <a class="nav-link pills" routerLink="/letovi">Letovi</a>
+            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'letovi'}}]">Letovi</a>
           </li>
           <li class="nav-item margina2">
-            <a class="nav-link pills" routerLink="/pocetna-stranica/letovi">Slobodna mesta</a>
+            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'hoteli'}}]">Hoteli</a>
           </li>
           <li class="nav-item margina2">
-            <a class="nav-link pills" routerLink="/hoteli">Hoteli</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills" routerLink="/rent-a-car-servisi">Rent-a-car servisi</a>
+            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'rent-a-car-servisi'}}]">Rent-a-car servisi</a>
           </li>
       </ul>
 
       </div>
 
-      <!--br da se zamene marginama i da se login sredi i registracija isto-->
       <div id="blue" class="col-10">
-        <br>
-        <form>
-          <p>Prijava:</p>
-          <div class="form-group">
-            <input class="form-control" type="text" [(ngModel)]="k.username" name="username" placeholder="Korisnicko ime">
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="password" [(ngModel)]="k.password" name="password" placeholder="Lozinka">
-          </div>
-        </form>
-        <br>
-        <button type="button" class="btn btn-danger" (click)="prijava()">Prijava</button>
-        <br/>
-        <br/>
-        <p>Niste registrovani? <a href="">Registracija</a></p> 
-
-
-        <!--<table class="table table-striped">
-          <thead>
-              <th>Id</th>
-              <th>Korisnicko ime</th>
-              <th>Lozinka</th>
-              <th>Operacija </th>
-          </thead>
-          <tbody>
-              <tr *ngFor="let korisnik of korisnici">
-                  <td>{{korisnik.id}}</td>
-                  <td>{{korisnik.username}}</td>
-                  <td>{{korisnik.password}}</td>
-                  <td><button class="btn btn-danger">Delete</button>
-                      <button class="btn btn-primary">Edit</button></td>
-              </tr>
-          </tbody>
-      </table>
-      <button class="btn btn-primary">New User</button>-->
-      </div>       
+        <router-outlet name="p"></router-outlet> 
+      </div>    
 
   </div>
 

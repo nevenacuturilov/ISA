@@ -11,6 +11,8 @@ import { AvioKompanijeComponent } from './components/avio-kompanije/avio-kompani
 import { LetoviComponent } from './components/letovi/letovi.component';
 import { HoteliComponent } from './components/hoteli/hoteli.component';
 import { RentACarServisiComponent } from './components/rent-a-car-servisi/rent-a-car-servisi.component';
+import { PrijavaComponent } from './components/prijava/prijava.component';
+import { RegistracijaComponent } from './components/registracija/registracija.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { RentACarServisiComponent } from './components/rent-a-car-servisi/rent-a
     AvioKompanijeComponent,
     LetoviComponent,
     HoteliComponent,
-    RentACarServisiComponent
+    RentACarServisiComponent,
+    PrijavaComponent,
+    RegistracijaComponent
   ],
   imports: [
     BrowserModule,
