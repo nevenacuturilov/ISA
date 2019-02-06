@@ -8,21 +8,33 @@ import java.util.List;
 public class Aviokompanija {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    //@Column(nullable=false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     private String naziv;
-    private String adresa; //razloziti?
+
+    //razloziti?
+    private String adresa;
+
     private String promotivniOpis;
-    @ElementCollection(targetClass=String.class)
-    private List<String> destinacije  = new ArrayList<String>();
-    @OneToMany(mappedBy = "a", fetch = FetchType.LAZY)
-    //@OneToMany(cascade= CascadeType.ALL)
+
+    @ElementCollection(targetClass = String.class)
+    private List<String> destinacije;
+
+    @OneToMany(mappedBy = "aviokompanija", fetch = FetchType.LAZY)
     private List<Let> letovi = new ArrayList<Let>();
-    private String spisakKarata; //??
-    private String konfiguracija; //??
-    private String cenovnik; //??
-    private String prtljag; //??
+
+    //??
+    private String spisakKarata;
+
+    //??
+    private String konfiguracija;
+
+    //??
+    private String cenovnik;
+
+    //??
+    private String prtljag;
 
     public Aviokompanija() {
     }

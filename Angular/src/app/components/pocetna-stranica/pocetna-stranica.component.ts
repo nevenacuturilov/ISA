@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Korisnik } from 'src/app/korisnik';
+import { Korisnik } from 'src/app/models/korisnik';
 import { KorisnikService } from 'src/app/services/korisnik.service';
 import { Router } from '@angular/router';
 
@@ -17,8 +17,8 @@ export class PocetnaStranicaComponent implements OnInit {
   ngOnInit() {
     // this.k = this.korisnikService.getter();
     this.korisnikService.getUsers().subscribe((users) => {
-      console.log('Korisnici:');
-      console.log(users);
+      // console.log('Korisnici:');
+      // console.log(users);
       this.korisnici = users;
     }, (error) => {
       console.log(error);

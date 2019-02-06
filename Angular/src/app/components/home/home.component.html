@@ -1,0 +1,40 @@
+<div class="container-fluid h-100">
+
+  <div class="row h-100">
+
+    <div id="pink" class="col-2">
+
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item margina1">
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'profil'}}]">Profil</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'rezervacije'}}]">Rezervacije</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'avio-kompanije'}}]">Aviokompanije</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'letovi'}}]">Letovi</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'hoteli'}}]">Hoteli</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'rent-a-car-servisi'}}]">Rent-a-car
+            servisi</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills">Prijatelji</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div id="blue" class="col-10">
+      <router-outlet name="pro"></router-outlet>
+    </div>
+
+  </div>
+
+</div>

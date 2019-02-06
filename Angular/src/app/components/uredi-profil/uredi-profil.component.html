@@ -1,0 +1,60 @@
+<br>
+<p id="welcome">Dobro dosli</p>
+<br>
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th>Korisnicko ime:</th>
+            <td>
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="k.username" name="username"
+                        placeholder="{{k.username}}">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>Lozinka:</th>
+            <td>
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="k.password" name="password"
+                        placeholder="{{k.password}}">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>Ime:</th>
+            <td>
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="k.ime" name="ime" placeholder="{{k.ime}}">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>Prezime:</th>
+            <td>
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="k.prezime" name="prezime"
+                        placeholder="{{k.prezime}}">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>Grad:</th>
+            <td>
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="k.grad" name="grad" placeholder="{{k.grad}}">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>Broj telefona:</th>
+            <td>
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="k.brojTelefona" name="brojTelefona"
+                        placeholder="{{k.brojTelefona}}">
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    <br>
+    <button type="button" class="btn btn-danger" (click)="save()">Sacuvaj izmene</button>

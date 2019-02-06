@@ -8,9 +8,9 @@ describe('RentACarServisiComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RentACarServisiComponent ]
+      declarations: [RentACarServisiComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

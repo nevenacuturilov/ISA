@@ -8,9 +8,9 @@ describe('PocetnaStranicaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PocetnaStranicaComponent ]
+      declarations: [PocetnaStranicaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

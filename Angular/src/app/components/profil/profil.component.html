@@ -1,40 +1,32 @@
-<div class="container-fluid h-100">
-
-  <div class="row h-100">
-
-    <div id="pink" class="col-2">
-
-      <ul class="nav nav-pills flex-column">
-          <li class="nav-item margina1">
-            <a class="nav-link pills" >Profil</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills">Rezervacije</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills" [routerLink]="['/profil', {outlets: {pro:'avio-kompanije'}}]">Aviokompanije</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills" [routerLink]="['/profil', {outlets: {pro:'letovi'}}]">Letovi</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills" [routerLink]="['/profil', {outlets: {pro:'hoteli'}}]">Hoteli</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills" [routerLink]="['/profil', {outlets: {pro:'rent-a-car-servisi'}}]">Rent-a-car servisi</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills">Prijatelji</a>
-          </li>
-      </ul>
-
-      </div>
-
-      <div id="blue" class="col-10">
-        <router-outlet name="pro"></router-outlet> 
-      </div>    
-
-  </div>
-
-</div>
-
+<br>
+<p id="welcome">Dobro dosli</p>
+<br>
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th>Korisnicko ime:</th>
+            <td>{{korisnik.username}}</td>
+        </tr>
+        <tr>
+            <th>Lozinka:</th>
+            <td>{{korisnik.password}}</td>
+        </tr>
+        <tr>
+            <th>Ime:</th>
+            <td>{{korisnik.ime}}</td>
+        </tr>
+        <tr>
+            <th>Prezime:</th>
+            <td>{{korisnik.prezime}}</td>
+        </tr>
+        <tr>
+            <th>Grad:</th>
+            <td>{{korisnik.grad}}</td>
+        </tr>
+        <tr>
+            <th>Broj telefona:</th>
+            <td>{{korisnik.brojTelefona}}</td>
+        </tr>
+    </tbody>
+    <br>
+    <button type="button" class="btn btn-danger" (click)="edit()">Uredi profil</button>

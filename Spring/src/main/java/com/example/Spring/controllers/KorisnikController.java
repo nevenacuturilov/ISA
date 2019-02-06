@@ -9,41 +9,42 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/k")
-@CrossOrigin(origins="http://localhost:4200", allowedHeaders="*")
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 public class KorisnikController {
 
     @Autowired
     private KorisnikRepository korisnikRepository;
 
     @GetMapping("/korisnici")
-    public List<Korisnik> getKorisnici(){
+    public List<Korisnik> getKorisnici() {
 
         return korisnikRepository.findAll();
     }
 
     @GetMapping("/korisnik/{id}")
-    public Korisnik getKorisnik(@PathVariable Integer id){
-       return korisnikRepository.findById(id).get(); //upitno da li radi
+    public Korisnik getKorisnik(@PathVariable Integer id) {
+
+        //upitno da li radi
+        return korisnikRepository.findById(id).get();
 
     }
 
     @DeleteMapping("/korisnik")
-    public boolean deleteKorisnik(@RequestBody Korisnik korisnik){
+    public boolean deleteKorisnik(@RequestBody Korisnik korisnik) {
+
         korisnikRepository.delete(korisnik);
         return true;
     }
-    
+
     @PostMapping("/korisnik")
-	public Korisnik createKorisnik(@RequestBody Korisnik korisnik) {
+    public Korisnik createKorisnik(@RequestBody Korisnik korisnik) {
 
         return korisnikRepository.save(korisnik);
-	}
+    }
 
     @PutMapping("/korisnik")
-	public Korisnik updateKorisnik(@RequestBody Korisnik korisnik) {
+    public Korisnik updateKorisnik(@RequestBody Korisnik korisnik) {
 
         return korisnikRepository.save(korisnik);
-	}
-
+    }
 }
-

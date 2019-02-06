@@ -12,13 +12,21 @@ public class AdministratorAviokompanije {
     private Integer id;
     private String username;
     private String password;
+    private String ime;
+    private String prezime;
+    private String grad;
+    private String brojTelefona;
 
     public AdministratorAviokompanije() {
     }
 
-    public AdministratorAviokompanije(String username, String password) {
+    public AdministratorAviokompanije(String username, String password, String ime, String prezime, String grad, String brojTelefona) {
         this.username = username;
         this.password = password;
+        this.ime = ime;
+        this.prezime = prezime;
+        this.grad = grad;
+        this.brojTelefona = brojTelefona;
     }
 
     public Integer getId() {
@@ -43,5 +51,37 @@ public class AdministratorAviokompanije {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getIme() {
+        return ime;
+    }
+
+    public void setIme(String ime) {
+        this.ime = ime;
+    }
+
+    public String getPrezime() {
+        return prezime;
+    }
+
+    public void setPrezime(String prezime) {
+        this.prezime = prezime;
+    }
+
+    public String getGrad() {
+        return grad;
+    }
+
+    public void setGrad(String grad) {
+        this.grad = grad;
+    }
+
+    public String getBrojTelefona() {
+        return brojTelefona;
+    }
+
+    public void setBrojTelefona(String brojTelefona) {
+        this.brojTelefona = brojTelefona;
     }
 }

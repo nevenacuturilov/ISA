@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LetoviComponent } from './letovi.component';
+import { UrediProfilComponent } from './uredi-profil.component';
 
-describe('LetoviComponent', () => {
-  let component: LetoviComponent;
-  let fixture: ComponentFixture<LetoviComponent>;
+describe('UrediProfilComponent', () => {
+  let component: UrediProfilComponent;
+  let fixture: ComponentFixture<UrediProfilComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LetoviComponent]
+      declarations: [UrediProfilComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LetoviComponent);
+    fixture = TestBed.createComponent(UrediProfilComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

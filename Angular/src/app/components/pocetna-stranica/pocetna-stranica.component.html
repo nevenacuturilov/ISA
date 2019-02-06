@@ -5,30 +5,31 @@
     <div id="pink" class="col-2">
 
       <ul class="nav nav-pills flex-column">
-          <li class="nav-item margina1">
-            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'prijava'}}]">Pocetna stranica</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'avio-kompanije'}}]">Aviokompanije</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'letovi'}}]">Letovi</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'hoteli'}}]">Hoteli</a>
-          </li>
-          <li class="nav-item margina2">
-            <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'rent-a-car-servisi'}}]">Rent-a-car servisi</a>
-          </li>
+        <li class="nav-item margina1">
+          <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'prijava'}}]">Pocetna stranica</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills"
+            [routerLink]="['/pocetna-stranica', {outlets: {p:'avio-kompanije'}}]">Aviokompanije</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'letovi'}}]">Letovi</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'hoteli'}}]">Hoteli</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/pocetna-stranica', {outlets: {p:'rent-a-car-servisi'}}]">Rent-a-car
+            servisi</a>
+        </li>
       </ul>
 
-      </div>
+    </div>
 
-      <div id="blue" class="col-10">
-        <router-outlet name="p"></router-outlet> 
-      </div>    
+    <div id="blue" class="col-10">
+      <router-outlet name="p"></router-outlet>
+    </div>
 
   </div>
 
 </div>
-

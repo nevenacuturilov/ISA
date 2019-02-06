@@ -10,34 +10,29 @@ public class Let {
     @Id
     @GeneratedValue
     private Integer id;
+
     private String datumPoletanja;
+
     private String vremePoletanja;
+
     private String datumSletanja;
+
     private String vremeSletanja;
+
     private String vremePutovanja;
+
     private String duzinaPutovanja;
+
     private Integer brojPresedanja;
-    @ElementCollection(targetClass=String.class)
+
+    @ElementCollection(targetClass = String.class)
     private List<String> lokacijePresedanja;
+
     private Integer cenaKarte;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="aid",referencedColumnName="id", insertable=false, updatable=false)
-    private Aviokompanija a;
-
-    public void setLokacijePresedanja(List<String> lokacijePresedanja) {
-        this.lokacijePresedanja = lokacijePresedanja;
-    }
-
-    public Aviokompanija getA() {
-        return a;
-    }
-
-    public void setA(Aviokompanija a) {
-        this.a = a;
-    }
-
-
+    @JoinColumn(name = "aid", referencedColumnName = "id", insertable = false, updatable = false)
+    private Aviokompanija aviokompanija;
 
     public Let() {
     }
@@ -134,4 +129,13 @@ public class Let {
     public void setCenaKarte(Integer cenaKarte) {
         this.cenaKarte = cenaKarte;
     }
+
+    public Aviokompanija getAviokompanija() {
+        return aviokompanija;
+    }
+
+    public void setAviokompanija(Aviokompanija aviokompanija) {
+        this.aviokompanija = aviokompanija;
+    }
+
 }

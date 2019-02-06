@@ -2,54 +2,54 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { map, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-import { Korisnik } from '../models/korisnik';
+import { Aviokompanija } from '../models/aviokompanija';
 
 @Injectable({
   providedIn: 'root'
 })
-export class KorisnikService {
+export class AviokompanijaService {
 
-  private url = 'http://localhost:8080/k';
+  private url = 'http://localhost:8080/a';
   private headers = new Headers({ 'Content-Type': 'application/json' });
   private options = new RequestOptions({ headers: this.headers });
-  private korisnik = new Korisnik();
+  private aviokompanija = new Aviokompanija();
 
   constructor(private http: Http) {
   }
 
-  setter(korisnik: Korisnik) {
-    this.korisnik = korisnik;
+  setter(aviokompanija: Aviokompanija) {
+    this.aviokompanija = aviokompanija;
   }
 
   getter() {
-    return this.korisnik;
+    return this.aviokompanija;
   }
 
-  getUsers() {
-    return this.http.get(this.url + '/korisnici', this.options)
+  getAirlines() {
+    return this.http.get(this.url + '/aviokompanije', this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }
-  getUser(id: Number) {
-    return this.http.get(this.url + '/korisnik/' + id, this.options)
-      .pipe(map((response: Response) => response.json()))
-      .pipe(catchError(this.errorHandler));
-  }
-
-  deleteUser(id: Number) {
-    return this.http.delete(this.url + '/korisnik' + id, this.options)
+  getAirline(id: Number) {
+    return this.http.get(this.url + '/aviokompanija/' + id, this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }
 
-  createUser(korisnik: Korisnik) {
-    return this.http.post(this.url + '/korisnik', JSON.stringify(korisnik), this.options)
+  deleteAirline(id: Number) {
+    return this.http.delete(this.url + '/aviokompanija' + id, this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }
 
-  updateUser(korisnik: Korisnik) {
-    return this.http.put(this.url + '/korisnik', JSON.stringify(korisnik), this.options)
+  createAirline(aviokompanija: Aviokompanija) {
+    return this.http.post(this.url + '/aviokompanija', JSON.stringify(aviokompanija), this.options)
+      .pipe(map((response: Response) => response.json()))
+      .pipe(catchError(this.errorHandler));
+  }
+
+  updateUAirline(aviokompanija: Aviokompanija) {
+    return this.http.put(this.url + '/aviokompanija', JSON.stringify(aviokompanija), this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }

@@ -8,9 +8,9 @@ describe('AvioKompanijeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AvioKompanijeComponent ]
+      declarations: [AvioKompanijeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -9,26 +9,29 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/l")
-@CrossOrigin(origins="http://localhost:4200", allowedHeaders="*")
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 public class LetController {
 
     @Autowired
     private LetRepository letRepository;
 
     @GetMapping("/letovi")
-    public List<Let> getLetovi(){
+    public List<Let> getLetovi() {
 
         return letRepository.findAll();
     }
 
     @GetMapping("/let/{id}")
-    public Let getLet(@PathVariable Integer id){
-        return letRepository.findById(id).get(); //upitno da li radi
+    public Let getLet(@PathVariable Integer id) {
+
+        //upitno da li radi
+        return letRepository.findById(id).get();
 
     }
 
     @DeleteMapping("/let")
-    public boolean deleteLet(@RequestBody Let let){
+    public boolean deleteLet(@RequestBody Let let) {
+
         letRepository.delete(let);
         return true;
     }

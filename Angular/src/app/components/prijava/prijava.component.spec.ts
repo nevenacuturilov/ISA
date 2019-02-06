@@ -8,9 +8,9 @@ describe('PrijavaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PrijavaComponent ]
+      declarations: [PrijavaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
