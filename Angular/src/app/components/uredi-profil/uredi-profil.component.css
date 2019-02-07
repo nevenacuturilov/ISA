@@ -1,14 +1,13 @@
 table {
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+button {
+    margin: 0 auto;
 }
 
 th {
     text-align: left;
-}
-
-#welcome {
-    text-align: left;
-    color: black;
-    font-weight: bold;
+    font-weight:normal;
 }

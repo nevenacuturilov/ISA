@@ -1,0 +1,31 @@
+<table class="table table-striped">
+    <thead>
+        <th>Naziv</th>
+        <th>Adresa</th>
+        <th>Promotivni opis</th>
+        <th>Destinacije</th>
+        <th>Letovi</th>
+        <th>Spisak karata</th>
+        <th>Konfiguracija</th>
+        <th>Cenovnik</th>
+        <th>Prtljag</th>
+        <th>Operacije</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let aviokompanija of aviokompanije">
+            <td>{{aviokompanija.naziv}}</td>
+            <td>{{aviokompanija.adresa}}</td>
+            <td>{{aviokompanija.promotivniOpis}}</td>
+            <td>{{aviokompanija.destinacije}}</td>
+            <td>{{aviokompanija.letovi}}</td>
+            <td>{{aviokompanija.spisakKarata}}</td>
+            <td>{{aviokompanija.kofiguracija}}</td>
+            <td>{{aviokompanija.cenovnik}}</td>
+            <td>{{aviokompanija.prtljag}}</td>
+            <td><button class="btn btn-danger" (click)="delete(aviokompanija)">Izbrisi</button>
+                <button class="btn btn-primary" (click)="edit(aviokompanija)">Izmeni</button>
+        </td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" (click)="add()">Dodaj</button>

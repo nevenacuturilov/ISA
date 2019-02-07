@@ -6,22 +6,22 @@
 
       <ul class="nav nav-pills flex-column">
         <li class="nav-item margina1">
-          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'profil'}}]">Profil</a>
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {h:'profil'}}]">Profil</a>
         </li>
         <li class="nav-item margina2">
-          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'rezervacije'}}]">Rezervacije</a>
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {h:'rezervacije'}}]">Rezervacije</a>
         </li>
         <li class="nav-item margina2">
-          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'avio-kompanije'}}]">Aviokompanije</a>
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {h:'avio-kompanije'}}]">Aviokompanije</a>
         </li>
         <li class="nav-item margina2">
-          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'letovi'}}]">Letovi</a>
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {h:'letovi'}}]">Letovi</a>
         </li>
         <li class="nav-item margina2">
-          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'hoteli'}}]">Hoteli</a>
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {h:'hoteli'}}]">Hoteli</a>
         </li>
         <li class="nav-item margina2">
-          <a class="nav-link pills" [routerLink]="['/home', {outlets: {pro:'rent-a-car-servisi'}}]">Rent-a-car
+          <a class="nav-link pills" [routerLink]="['/home', {outlets: {h:'rent-a-car-servisi'}}]">Rent-a-car
             servisi</a>
         </li>
         <li class="nav-item margina2">
@@ -32,7 +32,7 @@
     </div>
 
     <div id="blue" class="col-10">
-      <router-outlet name="pro"></router-outlet>
+      <router-outlet name="h"></router-outlet>
     </div>
 
   </div>

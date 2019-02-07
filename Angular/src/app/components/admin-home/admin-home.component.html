@@ -1,0 +1,31 @@
+<div class="container-fluid h-100">
+
+  <div class="row h-100">
+
+    <div id="pink" class="col-2">
+
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item margina1">
+          <a class="nav-link pills"
+            [routerLink]="['/admin-home', {outlets: {a:'admin-aviokompanije'}}]">Aviokompanije</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/admin-home', {outlets: {a:'admin-letovi'}}]">Letovi</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills">Izvestaji</a>
+        </li>
+        <li class="nav-item margina2">
+          <a class="nav-link pills" [routerLink]="['/admin-home', {outlets: {a:'admin-profil'}}]">Profil</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div id="blue" class="col-10">
+      <router-outlet name="a"></router-outlet>
+    </div>
+
+  </div>
+
+</div>

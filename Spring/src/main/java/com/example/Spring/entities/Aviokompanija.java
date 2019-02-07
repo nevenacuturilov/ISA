@@ -13,7 +13,6 @@ public class Aviokompanija {
 
     private String naziv;
 
-    //razloziti?
     private String adresa;
 
     private String promotivniOpis;

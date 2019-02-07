@@ -22,7 +22,7 @@ public class AviokompanijaController {
     }
 
     @GetMapping("/aviokompanija/{id}")
-    public Aviokompanija getLet(@PathVariable Integer id) {
+    public Aviokompanija getAviokompanija(@PathVariable Integer id) {
 
         //upitno da li radi
         return aviokompanijaRepository.findById(id).get();

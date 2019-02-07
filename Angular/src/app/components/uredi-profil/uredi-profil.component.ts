@@ -11,12 +11,13 @@ import { Korisnik } from 'src/app/models/korisnik';
 export class UrediProfilComponent implements OnInit {
 
   private korisnici: Korisnik[];
-  private k: Korisnik;
+  private korisnik: Korisnik;
 
   constructor(private korisnikService: KorisnikService, private router: Router) { }
 
   ngOnInit() {
-    this.k = this.korisnikService.getter();
+    this.korisnik = this.korisnikService.getter();
+
     this.korisnikService.getUsers().subscribe((users) => {
       this.korisnici = users;
     }, (error) => {
@@ -25,10 +26,8 @@ export class UrediProfilComponent implements OnInit {
   }
 
   save() {
-    this.router.navigate(['/home', { outlets: { pro: 'profil' } }]);
-    this.korisnikService.setter(this.k);
-    console.log('save');
-    console.log(this.k);
+    this.korisnikService.setter(this.korisnik);
+    this.router.navigate(['/home', { outlets: { h: 'profil' } }]);
   }
 
 }

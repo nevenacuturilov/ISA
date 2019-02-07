@@ -1,0 +1,44 @@
+<br>
+<h4>Dobro dosli</h4>
+<br>
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th>Korisnicko ime:</th>
+      <td>
+        <div class="form-group">
+          <input class="form-control" type="text" [(ngModel)]="admin.username" name="username"
+            placeholder="{{admin.username}}">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>Lozinka:</th>
+      <td>
+        <div class="form-group">
+          <input class="form-control" type="text" [(ngModel)]="admin.password" name="password"
+            placeholder="{{admin.password}}">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>Ime:</th>
+      <td>
+        <div class="form-group">
+          <input class="form-control" type="text" [(ngModel)]="admin.ime" name="ime" placeholder="{{admin.ime}}">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>Prezime:</th>
+      <td>
+        <div class="form-group">
+          <input class="form-control" type="text" [(ngModel)]="admin.prezime" name="prezime"
+            placeholder="{{admin.prezime}}">
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<button type="button" class="btn btn-danger" (click)="save()">Sacuvaj izmene</button>

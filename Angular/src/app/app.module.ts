@@ -7,7 +7,7 @@ import { PocetnaStranicaComponent } from './components/pocetna-stranica/pocetna-
 import { KorisnikService } from './services/korisnik.service';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
-import { AvioKompanijeComponent } from './components/avio-kompanije/avio-kompanije.component';
+import { AviokompanijeComponent } from './components/aviokompanije/aviokompanije.component';
 import { LetoviComponent } from './components/letovi/letovi.component';
 import { HoteliComponent } from './components/hoteli/hoteli.component';
 import { RentACarServisiComponent } from './components/rent-a-car-servisi/rent-a-car-servisi.component';
@@ -16,13 +16,19 @@ import { RegistracijaComponent } from './components/registracija/registracija.co
 import { ProfilComponent } from './components/profil/profil.component';
 import { RezervacijeComponent } from './components/rezervacije/rezervacije.component';
 import { UrediProfilComponent } from './components/uredi-profil/uredi-profil.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { AdminProfilComponent } from './components/admin-profil/admin-profil.component';
+import { AdminUrediProfilComponent } from './components/admin-uredi-profil/admin-uredi-profil.component';
+import { AdminLetoviComponent } from './components/admin-letovi/admin-letovi.component';
+import { AdminAviokompanijeComponent } from './components/admin-aviokompanije/admin-aviokompanije.component';
+import { AdminUrediAviokompanijuComponent } from './components/admin-uredi-aviokompaniju/admin-uredi-aviokompaniju.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PocetnaStranicaComponent,
     HomeComponent,
-    AvioKompanijeComponent,
+    AviokompanijeComponent,
     LetoviComponent,
     HoteliComponent,
     RentACarServisiComponent,
@@ -30,7 +36,13 @@ import { UrediProfilComponent } from './components/uredi-profil/uredi-profil.com
     RegistracijaComponent,
     ProfilComponent,
     RezervacijeComponent,
-    UrediProfilComponent
+    UrediProfilComponent,
+    AdminHomeComponent,
+    AdminProfilComponent,
+    AdminUrediProfilComponent,
+    AdminLetoviComponent,
+    AdminAviokompanijeComponent,
+    AdminUrediAviokompanijuComponent
   ],
   imports: [
     BrowserModule,
