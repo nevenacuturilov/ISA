@@ -50,13 +50,13 @@ public class Application implements CommandLineRunner {
 
         //LETOVI
 
-        Let let1 = new Let("12.05.2016", "15:30", "12.05.2016", "16:30",
+        Let let1 = new Let("Novi Sad","Beograd","12.05.2016", "15:30", "12.05.2016", "16:30",
                 "vreme", "1", 2, lokacijePresedanja, 330);
-        Let let2 = new Let("16.05.2016", "05:00", "16.05.2016", "06:30",
+        Let let2 = new Let("Novi Pazar","Beograd","16.05.2016", "05:00", "16.05.2016", "06:30",
                 "vreme", "1 h i 30 min", 1, lokacijePresedanja, 530);
-        Let let3 = new Let("18.05.2016", "12:30", "18.05.2016", "13:30",
+        Let let3 = new Let("Belin","Moskva","18.05.2016", "12:30", "18.05.2016", "13:30",
                 "vreme", "1 h", 0, lokacijePresedanja, 230);
-        Let let4 = new Let("22.05.2016", "19:30", "22.05.2016", "20:30",
+        Let let4 = new Let("Novi Novi","Beograd","22.05.2016", "19:30", "22.05.2016", "20:30",
                 "vreme", "1 h", 3, lokacijePresedanja, 300);
 
         letRepository.save(let1);

@@ -28,6 +28,9 @@ import { AdminPrikaziLetComponent } from './components/admin-prikazi-let/admin-p
 import { PrikazAviokompanijaComponent } from './components/prikaz-aviokompanija/prikaz-aviokompanija.component';
 import { PrikazAviokompanijeComponent } from './components/prikaz-aviokompanije/prikaz-aviokompanije.component';
 import { AviokompanijaComponent } from './components/aviokompanija/aviokompanija.component';
+import { LetComponent } from './components/let/let.component';
+import { PrikazLetComponent } from './components/prikaz-let/prikaz-let.component';
+import { PrikazLetoviComponent } from './components/prikaz-letovi/prikaz-letovi.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,10 @@ import { AviokompanijaComponent } from './components/aviokompanija/aviokompanija
     AdminPrikaziLetComponent,
     PrikazAviokompanijaComponent,
     PrikazAviokompanijeComponent,
-    AviokompanijaComponent
+    AviokompanijaComponent,
+    LetComponent,
+    PrikazLetComponent,
+    PrikazLetoviComponent
   ],
   imports: [
     BrowserModule,

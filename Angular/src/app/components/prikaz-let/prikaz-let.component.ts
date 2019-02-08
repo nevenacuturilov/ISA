@@ -4,19 +4,20 @@ import { LetService } from 'src/app/services/let.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-letovi',
-  templateUrl: './letovi.component.html',
-  styleUrls: ['./letovi.component.css']
+  selector: 'app-prikaz-let',
+  templateUrl: './prikaz-let.component.html',
+  styleUrls: ['./prikaz-let.component.css']
 })
-export class LetoviComponent implements OnInit {
+export class PrikazLetComponent implements OnInit {
 
   private letovi: Let[];
-  private leet: Let;
+  private l: Let;
 
   constructor(private letService: LetService, private router: Router) {
   }
-
   ngOnInit() {
+    this.l = this.letService.getter();
+
     this.letService.getFlights().subscribe((flight) => {
       this.letovi = flight;
     }, (error) => {
@@ -24,9 +25,8 @@ export class LetoviComponent implements OnInit {
     });
   }
 
-  display(l: Let) {
-    this.letService.setter(l);
-    this.router.navigate(['/home', { outlets: { h: 'let' } }]);
+  back() {
+    this.router.navigate(['/pocetna-stranica', { outlets: { p: 'prikaz-letovi' } }]);
   }
 
 }

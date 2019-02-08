@@ -4,11 +4,11 @@ import { LetService } from 'src/app/services/let.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-letovi',
-  templateUrl: './letovi.component.html',
-  styleUrls: ['./letovi.component.css']
+  selector: 'app-prikaz-letovi',
+  templateUrl: './prikaz-letovi.component.html',
+  styleUrls: ['./prikaz-letovi.component.css']
 })
-export class LetoviComponent implements OnInit {
+export class PrikazLetoviComponent implements OnInit {
 
   private letovi: Let[];
   private leet: Let;
@@ -26,7 +26,7 @@ export class LetoviComponent implements OnInit {
 
   display(l: Let) {
     this.letService.setter(l);
-    this.router.navigate(['/home', { outlets: { h: 'let' } }]);
+    this.router.navigate(['/pocetna-stranica', { outlets: { p: 'prikaz-let' } }]);
   }
 
 }

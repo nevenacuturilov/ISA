@@ -17,9 +17,6 @@ export class AdminAviokompanijeComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*this.a = this.aviokompanijaService.getter();
-    console.log(this.a);*/
-
     this.aviokompanijaService.getAirlines().subscribe((airlines) => {
       this.aviokompanije = airlines;
     }, (error) => {

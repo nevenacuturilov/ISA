@@ -23,6 +23,9 @@ import { AdminPrikaziLetComponent } from './components/admin-prikazi-let/admin-p
 import { PrikazAviokompanijeComponent } from './components/prikaz-aviokompanije/prikaz-aviokompanije.component';
 import { PrikazAviokompanijaComponent } from './components/prikaz-aviokompanija/prikaz-aviokompanija.component';
 import { AviokompanijaComponent } from './components/aviokompanija/aviokompanija.component';
+import { LetComponent } from './components/let/let.component';
+import { PrikazLetoviComponent } from './components/prikaz-letovi/prikaz-letovi.component';
+import { PrikazLetComponent } from './components/prikaz-let/prikaz-let.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/pocetna-stranica', pathMatch: 'full' },
@@ -34,8 +37,8 @@ const routes: Routes = [
       { path: 'registracija', component: RegistracijaComponent, outlet: 'p' },
       { path: 'prikaz-aviokompanije', component: PrikazAviokompanijeComponent, outlet: 'p' },
       { path: 'prikaz-aviokompanija', component: PrikazAviokompanijaComponent, outlet: 'p' },
-      // { path: 'prikaz-letovi', component: PrikazLetoviComponent, outlet: 'p' },
-      // { path: 'prikaz-let', component: PrikazLetComponent, outlet: 'p' },
+      { path: 'prikaz-letovi', component: PrikazLetoviComponent, outlet: 'p' },
+      { path: 'prikaz-let', component: PrikazLetComponent, outlet: 'p' },
       { path: 'hoteli', component: HoteliComponent, outlet: 'p' },
       { path: 'rent-a-car-servisi', component: RentACarServisiComponent, outlet: 'p' },
     ]
@@ -49,7 +52,7 @@ const routes: Routes = [
       { path: 'aviokompanije', component: AviokompanijeComponent, outlet: 'h' },
       { path: 'aviokompanija', component: AviokompanijaComponent, outlet: 'h' },
       { path: 'letovi', component: LetoviComponent, outlet: 'h' },
-      // { path: 'let', component: LetComponent, outlet: 'h' },
+      { path: 'let', component: LetComponent, outlet: 'h' },
       { path: 'hoteli', component: HoteliComponent, outlet: 'h' },
       { path: 'rent-a-car-servisi', component: RentACarServisiComponent, outlet: 'h' },
       // { path: 'prijatelji', component: PrijateljiComponent, outlet: 'h'},

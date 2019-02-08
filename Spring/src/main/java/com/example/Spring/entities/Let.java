@@ -11,6 +11,10 @@ public class Let {
     @GeneratedValue
     private Integer id;
 
+    private String mestoPoletanja;
+
+    private String mestoSletanja;
+
     private String datumPoletanja;
 
     private String vremePoletanja;
@@ -37,8 +41,10 @@ public class Let {
     public Let() {
     }
 
-    public Let(String datumPoletanja, String vremePoletanja, String datumSletanja, String vremeSletanja, String vremePutovanja,
+    public Let(String mestoPoletanja, String mestoSletanja, String datumPoletanja, String vremePoletanja, String datumSletanja, String vremeSletanja, String vremePutovanja,
                String duzinaPutovanja, Integer brojPresedanja, List<String> lokacijePresedanja, Integer cenaKarte) {
+        this.mestoPoletanja = mestoPoletanja;
+        this.mestoSletanja = mestoSletanja;
         this.datumPoletanja = datumPoletanja;
         this.vremePoletanja = vremePoletanja;
         this.datumSletanja = datumSletanja;
@@ -48,6 +54,22 @@ public class Let {
         this.brojPresedanja = brojPresedanja;
         this.lokacijePresedanja = lokacijePresedanja;
         this.cenaKarte = cenaKarte;
+    }
+
+    public String getMestoPoletanja() {
+        return mestoPoletanja;
+    }
+
+    public void setMestoPoletanja(String mestoPoletanja) {
+        this.mestoPoletanja = mestoPoletanja;
+    }
+
+    public String getMestoSletanja() {
+        return mestoSletanja;
+    }
+
+    public void setMestoSletanja(String mestoSletanja) {
+        this.mestoSletanja = mestoSletanja;
     }
 
     public Integer getId() {
