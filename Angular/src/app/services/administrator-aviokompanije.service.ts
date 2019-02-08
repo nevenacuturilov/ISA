@@ -37,7 +37,7 @@ export class AdministratorAviokompanijeService {
   }
 
   deleteAdmin(id: Number) {
-    return this.http.delete(this.url + '/administratorAviokompanije' + id, this.options)
+    return this.http.delete(this.url + '/administratorAviokompanije/' + id, this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }

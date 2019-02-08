@@ -26,8 +26,14 @@ export class UrediProfilComponent implements OnInit {
   }
 
   save() {
-    this.korisnikService.setter(this.korisnik);
-    this.router.navigate(['/home', { outlets: { h: 'profil' } }]);
-  }
 
+    // Edit
+
+    this.korisnikService.updateUser(this.korisnik).subscribe((user) => {
+      this.router.navigate(['/home', { outlets: { h: 'profil' } }]);
+    },
+      (error) => {
+        console.log(error);
+      });
+  }
 }

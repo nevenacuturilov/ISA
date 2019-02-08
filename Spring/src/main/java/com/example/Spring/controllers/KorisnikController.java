@@ -29,10 +29,10 @@ public class KorisnikController {
 
     }
 
-    @DeleteMapping("/korisnik")
-    public boolean deleteKorisnik(@RequestBody Korisnik korisnik) {
+    @DeleteMapping("/korisnik/{id}")
+    public boolean deleteKorisnik(@PathVariable Integer id) {
 
-        korisnikRepository.delete(korisnik);
+        korisnikRepository.deleteById(id);
         return true;
     }
 

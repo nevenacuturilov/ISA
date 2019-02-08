@@ -1,15 +1,15 @@
-<br>
-<h4>Aviokompanija</h4>
-<br>
 <div class="container-fluid">
+
+  <br>
 
   <div class="row">
 
     <div class="col-6">
-      <table class="table table-striped table-bordered table-light">
+
+      <table class="table table-striped table-bordered table-light table-hover">
         <tbody>
           <tr>
-            <th>Naziv:</th>
+            <th>Naziv</th>
             <td>
               <div class="form-group">
                 <input class="form-control" type="text" [(ngModel)]="aviokompanija.naziv" name="naziv"
@@ -18,7 +18,7 @@
             </td>
           </tr>
           <tr>
-            <th>Adresa:</th>
+            <th>Adresa</th>
             <td>
               <div class="form-group">
                 <input class="form-control" type="text" [(ngModel)]="aviokompanija.adresa" name="adresa"
@@ -27,7 +27,7 @@
             </td>
           </tr>
           <tr>
-            <th>Opis:</th>
+            <th>Opis</th>
             <td>
               <div class="form-group">
                 <input class="form-control" type="text" [(ngModel)]="aviokompanija.promotivniOpis" name="promotivniOpis"
@@ -36,7 +36,7 @@
             </td>
           </tr>
           <tr>
-            <th>Destinacije:</th>
+            <th>Destinacije</th>
             <td>
               <div class="form-group">
                 <input class="form-control" type="text" [(ngModel)]="aviokompanija.destinacije" name="destinacije"
@@ -45,23 +45,22 @@
             </td>
           </tr>
           <tr>
-              <th>Letovi:</th>
-              <td>
-                <div class="form-group">
-                  <input class="form-control" type="text">
-                </div>
-              </td>
-            </tr>
+            <th>Letovi</th>
+            <td>
+              <div class="form-group">
+                <input class="form-control" type="text">
+              </div>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
 
-
     <div class="col-6">
-      <table class="table table-striped table-bordered table-light">
+      <table class="table table-striped table-bordered table-light table-hover">
         <tbody>
           <tr>
-            <th>Spisak karata sa popustima:</th>
+            <th>Spisak karata sa popustima</th>
             <td>
               <div class="form-group">
                 <input class="form-control" type="text" [(ngModel)]="aviokompanija.spisakKarata" name="spisakKarata"
@@ -70,7 +69,7 @@
             </td>
           </tr>
           <tr>
-            <th>Konfiguracija segmenata i mesta:</th>
+            <th>Konfiguracija segmenata i mesta</th>
             <td>
               <div class="form-group">
                 <input class="form-control" type="text" [(ngModel)]="aviokompanija.konfiguracija" name="konfiguracija"
@@ -79,7 +78,7 @@
             </td>
           </tr>
           <tr>
-            <th>Cenovnik:</th>
+            <th>Cenovnik</th>
             <td>
               <div class="form-group">
                 <input class="form-control" type="text" [(ngModel)]="aviokompanija.cenovnik" name="cenovnik"
@@ -88,7 +87,7 @@
             </td>
           </tr>
           <tr>
-            <th>Prtljag:</th>
+            <th>Prtljag</th>
             <td>
               <div class="form-group">
                 <input class="form-control" type="text" [(ngModel)]="aviokompanija.prtljag" name="prtljag"
@@ -98,9 +97,11 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-</div>
 
-<br>
-<button type="button" class="btn btn-danger" (click)="save()">Sacuvaj izmene</button>
+    </div>
+    
+  </div>
+
+  <button type="button" class="btn btn-dark" (click)="save()">Sacuvaj</button>
+
+</div>

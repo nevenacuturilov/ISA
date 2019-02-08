@@ -1,6 +1,7 @@
 table {
-    width: 400px;
     margin: 0 auto;
+    table-layout:fixed;
+    width: 300px;
 }
 
 button {

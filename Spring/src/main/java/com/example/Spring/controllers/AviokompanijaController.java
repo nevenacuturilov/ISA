@@ -29,10 +29,10 @@ public class AviokompanijaController {
 
     }
 
-    @DeleteMapping("/aviokompanija")
-    public boolean deleteAviokompanija(@RequestBody Aviokompanija aviokompanija) {
+    @DeleteMapping("/aviokompanija/{id}")
+    public boolean deleteAviokompanija(@PathVariable Integer id) {
 
-        aviokompanijaRepository.delete(aviokompanija);
+        aviokompanijaRepository.deleteById(id);
         return true;
     }
 

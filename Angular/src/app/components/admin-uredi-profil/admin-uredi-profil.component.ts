@@ -26,8 +26,15 @@ export class AdminUrediProfilComponent implements OnInit {
   }
 
   save() {
-    this.adminService.setter(this.admin);
-    this.router.navigate(['/admin-home', { outlets: { a: 'admin-profil' } }]);
+
+    // Edit
+
+    this.adminService.updateAdmin(this.admin).subscribe((administrator) => {
+      this.router.navigate(['/admin-home', { outlets: { a: 'admin-profil' } }]);
+    },
+      (error) => {
+        console.log(error);
+      });
   }
 
 }

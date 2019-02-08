@@ -17,7 +17,6 @@ export class ProfilComponent implements OnInit {
 
   ngOnInit() {
     this.korisnik = this.korisnikService.getter();
-    console.log(this.korisnik);
 
     this.korisnikService.getUsers().subscribe((users) => {
       this.korisnici = users;
@@ -27,6 +26,8 @@ export class ProfilComponent implements OnInit {
   }
 
   edit() {
+    /*this.korisnikService.setter(this.korisnik);
+    console.log('edit' + this.korisnik);*/
     this.router.navigate(['/home', { outlets: { h: 'uredi-profil' } }]);
   }
 

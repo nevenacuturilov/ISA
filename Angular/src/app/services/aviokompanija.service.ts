@@ -37,7 +37,7 @@ export class AviokompanijaService {
   }
 
   deleteAirline(id: Number) {
-    return this.http.delete(this.url + '/aviokompanija' + id, this.options)
+    return this.http.delete(this.url + '/aviokompanija/' + id, this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }
@@ -48,7 +48,7 @@ export class AviokompanijaService {
       .pipe(catchError(this.errorHandler));
   }
 
-  updateUAirline(aviokompanija: Aviokompanija) {
+  updateAirline(aviokompanija: Aviokompanija) {
     return this.http.put(this.url + '/aviokompanija', JSON.stringify(aviokompanija), this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));

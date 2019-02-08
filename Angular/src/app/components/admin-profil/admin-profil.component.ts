@@ -20,7 +20,6 @@ export class AdminProfilComponent implements OnInit {
 
   ngOnInit() {
     this.admin = this.adminService.getter();
-    console.log(this.admin);
 
     this.adminService.getAdmins().subscribe((administrators) => {
       this.admini = administrators;
@@ -30,8 +29,9 @@ export class AdminProfilComponent implements OnInit {
   }
 
   edit() {
+    /*this.adminService.setter(this.admin);
+    console.log('edit' + this.admin);*/
     this.router.navigate(['/admin-home', { outlets: { a: 'admin-uredi-profil' } }]);
   }
-
 
 }

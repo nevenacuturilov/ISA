@@ -37,7 +37,7 @@ export class KorisnikService {
   }
 
   deleteUser(id: Number) {
-    return this.http.delete(this.url + '/korisnik' + id, this.options)
+    return this.http.delete(this.url + '/korisnik/' + id, this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }

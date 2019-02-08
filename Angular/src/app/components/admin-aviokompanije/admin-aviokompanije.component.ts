@@ -22,7 +22,6 @@ export class AdminAviokompanijeComponent implements OnInit {
 
     this.aviokompanijaService.getAirlines().subscribe((airlines) => {
       this.aviokompanije = airlines;
-      console.log(this.aviokompanije);
     }, (error) => {
       console.log(error);
     });
@@ -36,7 +35,7 @@ export class AdminAviokompanijeComponent implements OnInit {
     });
   }
 
-  edit(aviokompanija: Aviokompanija) {
+  update(aviokompanija: Aviokompanija) {
     this.aviokompanijaService.setter(aviokompanija);
     this.router.navigate(['/admin-home', { outlets: { a: 'admin-uredi-aviokompaniju' } }]);
   }
@@ -45,7 +44,11 @@ export class AdminAviokompanijeComponent implements OnInit {
     this.a = new Aviokompanija();
     this.aviokompanijaService.setter(this.a);
     this.router.navigate(['/admin-home', { outlets: { a: 'admin-uredi-aviokompaniju' } }]);
+  }
 
+  display(aviokompanija: Aviokompanija) {
+    this.aviokompanijaService.setter(aviokompanija);
+    this.router.navigate(['/admin-home', { outlets: { a: 'admin-prikazi-aviokompaniju' } }]);
   }
 
 }

@@ -4,11 +4,11 @@ import { AviokompanijaService } from 'src/app/services/aviokompanija.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-aviokompanije',
-  templateUrl: './aviokompanije.component.html',
-  styleUrls: ['./aviokompanije.component.css']
+  selector: 'app-prikaz-aviokompanije',
+  templateUrl: './prikaz-aviokompanije.component.html',
+  styleUrls: ['./prikaz-aviokompanije.component.css']
 })
-export class AviokompanijeComponent implements OnInit {
+export class PrikazAviokompanijeComponent implements OnInit {
 
   private aviokompanije: Aviokompanija[];
   private a: Aviokompanija;
@@ -17,9 +17,6 @@ export class AviokompanijeComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*this.a = this.aviokompanijaService.getter();
-    console.log(this.a);*/
-
     this.aviokompanijaService.getAirlines().subscribe((airlines) => {
       this.aviokompanije = airlines;
     }, (error) => {
@@ -29,6 +26,7 @@ export class AviokompanijeComponent implements OnInit {
 
   display(aviokompanija: Aviokompanija) {
     this.aviokompanijaService.setter(aviokompanija);
-    this.router.navigate(['/home', { outlets: { h: 'aviokompanija' } }]);
+    this.router.navigate(['/pocetna-stranica', { outlets: { p: 'prikaz-aviokompanija' } }]);
   }
+
 }

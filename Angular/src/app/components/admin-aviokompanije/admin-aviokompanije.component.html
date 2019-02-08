@@ -1,31 +1,40 @@
-<table class="table table-striped">
-    <thead>
-        <th>Naziv</th>
-        <th>Adresa</th>
-        <th>Promotivni opis</th>
-        <th>Destinacije</th>
-        <th>Letovi</th>
-        <th>Spisak karata</th>
-        <th>Konfiguracija</th>
-        <th>Cenovnik</th>
-        <th>Prtljag</th>
-        <th>Operacije</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let aviokompanija of aviokompanije">
-            <td>{{aviokompanija.naziv}}</td>
-            <td>{{aviokompanija.adresa}}</td>
-            <td>{{aviokompanija.promotivniOpis}}</td>
-            <td>{{aviokompanija.destinacije}}</td>
-            <td>{{aviokompanija.letovi}}</td>
-            <td>{{aviokompanija.spisakKarata}}</td>
-            <td>{{aviokompanija.kofiguracija}}</td>
-            <td>{{aviokompanija.cenovnik}}</td>
-            <td>{{aviokompanija.prtljag}}</td>
-            <td><button class="btn btn-danger" (click)="delete(aviokompanija)">Izbrisi</button>
-                <button class="btn btn-primary" (click)="edit(aviokompanija)">Izmeni</button>
-        </td>
-        </tr>
-    </tbody>
-</table>
-<button class="btn btn-primary" (click)="add()">Dodaj</button>
+<div class="container-fluid">
+    
+    <br>
+
+    <h4>Aviokompanije</h4>
+
+    <br>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+            <th>Naziv</th>
+            <th>Operacije</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aviokompanija of aviokompanije">
+                <td>{{aviokompanija.naziv}}</td>
+                <td>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-secondary" (click)="display(aviokompanija)">Prikazi</button>
+                            </div>
+                            <br>
+                            <div class="col-4">
+                                <button class="btn btn-danger" (click)="update(aviokompanija)">Izmeni</button>
+                            </div>
+                            <br>
+                            <div class="col-4">
+                                <button class="btn btn-dark" (click)="delete(aviokompanija)">Izbrisi</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-light" (click)="add()">Dodaj</button>
+
+</div>

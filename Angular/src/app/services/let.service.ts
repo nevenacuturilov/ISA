@@ -37,7 +37,7 @@ export class LetService {
   }
 
   deleteFlight(id: Number) {
-    return this.http.delete(this.url + '/let' + id, this.options)
+    return this.http.delete(this.url + '/let/' + id, this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }

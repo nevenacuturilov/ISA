@@ -22,6 +22,12 @@ import { AdminUrediProfilComponent } from './components/admin-uredi-profil/admin
 import { AdminLetoviComponent } from './components/admin-letovi/admin-letovi.component';
 import { AdminAviokompanijeComponent } from './components/admin-aviokompanije/admin-aviokompanije.component';
 import { AdminUrediAviokompanijuComponent } from './components/admin-uredi-aviokompaniju/admin-uredi-aviokompaniju.component';
+import { AdminUrediLetComponent } from './components/admin-uredi-let/admin-uredi-let.component';
+import { AdminPrikaziAviokompanijuComponent } from './components/admin-prikazi-aviokompaniju/admin-prikazi-aviokompaniju.component';
+import { AdminPrikaziLetComponent } from './components/admin-prikazi-let/admin-prikazi-let.component';
+import { PrikazAviokompanijaComponent } from './components/prikaz-aviokompanija/prikaz-aviokompanija.component';
+import { PrikazAviokompanijeComponent } from './components/prikaz-aviokompanije/prikaz-aviokompanije.component';
+import { AviokompanijaComponent } from './components/aviokompanija/aviokompanija.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +48,13 @@ import { AdminUrediAviokompanijuComponent } from './components/admin-uredi-aviok
     AdminUrediProfilComponent,
     AdminLetoviComponent,
     AdminAviokompanijeComponent,
-    AdminUrediAviokompanijuComponent
+    AdminUrediAviokompanijuComponent,
+    AdminUrediLetComponent,
+    AdminPrikaziAviokompanijuComponent,
+    AdminPrikaziLetComponent,
+    PrikazAviokompanijaComponent,
+    PrikazAviokompanijeComponent,
+    AviokompanijaComponent
   ],
   imports: [
     BrowserModule,

@@ -26,7 +26,22 @@ export class AdminUrediAviokompanijuComponent implements OnInit {
   }
 
   save() {
-    this.aviokompanijaService.setter(this.aviokompanija);
-  }
 
+    // Add
+
+    if (this.aviokompanija.id === undefined) {
+      this.aviokompanijaService.createAirline(this.aviokompanija).subscribe((airline) => {
+        this.router.navigate(['/admin-home', { outlets: { a: 'admin-aviokompanije' } }]);      }, (error) => {
+        console.log(error);
+      });
+    } else {
+
+      // Edit
+
+      this.aviokompanijaService.updateAirline(this.aviokompanija).subscribe((airline) => {
+        this.router.navigate(['/admin-home', { outlets: { a: 'admin-aviokompanije' } }]);      }, (error) => {
+        console.log(error);
+      });
+    }
+  }
 }

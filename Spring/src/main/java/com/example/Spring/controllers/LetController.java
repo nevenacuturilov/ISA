@@ -29,10 +29,10 @@ public class LetController {
 
     }
 
-    @DeleteMapping("/let")
-    public boolean deleteLet(@RequestBody Let let) {
+    @DeleteMapping("/let/{id}")
+    public boolean deleteLet(@PathVariable Integer id) {
 
-        letRepository.delete(let);
+        letRepository.deleteById(id);
         return true;
     }
 
