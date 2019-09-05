@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { map, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+
 import { Korisnik } from '../models/korisnik';
 
 @Injectable({
@@ -30,6 +31,7 @@ export class KorisnikService {
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }
+
   getUser(id: Number) {
     return this.http.get(this.url + '/korisnik/' + id, this.options)
       .pipe(map((response: Response) => response.json()))
@@ -57,5 +59,4 @@ export class KorisnikService {
   errorHandler(error: Response) {
     return throwError(error || 'SERVER ERROR');
   }
-
 }

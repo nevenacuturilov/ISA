@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { map, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-import { AdministratorAviokompanije } from '../models/administratorAviokompanije';
+
+import { AdministratorAviokompanije } from '../models/administrator-aviokompanije';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,7 @@ export class AdministratorAviokompanijeService {
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));
   }
+
   getAdmin(id: Number) {
     return this.http.get(this.url + '/administratorAviokompanije/' + id, this.options)
       .pipe(map((response: Response) => response.json()))

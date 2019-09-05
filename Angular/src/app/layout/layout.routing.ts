@@ -1,0 +1,54 @@
+import { Routes } from '@angular/router';
+
+import { HomeComponent } from '../elements/tema/home/home.component';
+import { UserComponent } from '../elements/tema/user/user.component';
+import { TablesComponent } from '../elements/tema/tables/tables.component';
+import { TypographyComponent } from '../elements/tema/typography/typography.component';
+import { IconsComponent } from '../elements/tema/icons/icons.component';
+import { MapsComponent } from '../elements/tema/maps/maps.component';
+import { NotificationsComponent } from '../elements/tema/notifications/notifications.component';
+import { UpgradeComponent } from '../elements/tema/upgrade/upgrade.component';
+
+import { RegistracijaComponent } from 'app/elements/registracija/registracija.component';
+import { AviokompanijaComponent } from 'app/elements/aviokompanija/aviokompanija.component';
+import { LetComponent } from 'app/elements/let/let.component';
+import { LetoviComponent } from 'app/elements/letovi/letovi.component';
+import { UrediProfilComponent } from 'app/elements/uredi-profil/uredi-profil.component';
+import { AviokompanijaPrikazComponent } from 'app/elements/aviokompanija-prikaz/aviokompanija-prikaz.component';
+import { AviokompanijePrikazComponent } from 'app/elements/aviokompanije-prikaz/aviokompanije-prikaz.component';
+import { LetPrikazComponent } from 'app/elements/let-prikaz/let-prikaz.component';
+import { LetoviPrikazComponent } from 'app/elements/letovi-prikaz/letovi-prikaz.component';
+import { PocetnaStranicaComponent } from 'app/elements/pocetna-stranica/pocetna-stranica.component';
+import { KorisnikProfilComponent } from 'app/elements/korisnik-profil/korisnik-profil.component';
+import { AviokompanijeComponent } from 'app/elements/aviokompanije/aviokompanije.component';
+import { PrijavaComponent } from 'app/elements/prijava/prijava.component';
+import { DestinacijeComponent } from 'app/elements/destinacije/destinacije.component';
+import { AtinaComponent } from 'app/elements/destinacije/atina/atina.component';
+import { RimComponent } from 'app/elements/destinacije/rim/rim.component';
+
+export const LayoutRoutes: Routes = [
+    { path: 'pocetna-stranica', component: PocetnaStranicaComponent },
+    { path: 'korisnik-profil', component: KorisnikProfilComponent },
+    { path: 'aviokompanije', component: AviokompanijeComponent },
+    { path: 'uredi-profil', component: UrediProfilComponent },
+    { path: 'aviokompanija-prikaz', component: AviokompanijaPrikazComponent },
+    { path: 'aviokompanije-prikaz', component: AviokompanijePrikazComponent },
+    { path: 'let-prikaz', component: LetPrikazComponent },
+    { path: 'letovi-prikaz', component: LetoviPrikazComponent },
+    { path: 'prijava', component: PrijavaComponent },
+    { path: 'registracija', component: RegistracijaComponent },
+    { path: 'aviokompanija', component: AviokompanijaComponent },
+    { path: 'let', component: LetComponent },
+    { path: 'atina', component: AtinaComponent },
+    { path: 'rim', component: RimComponent },
+    { path: 'letovi', component: LetoviComponent },
+    { path: 'destinacije', component: DestinacijeComponent },
+    { path: 'dashboard', component: HomeComponent },
+    { path: 'user', component: UserComponent },
+    { path: 'table', component: TablesComponent },
+    { path: 'typography', component: TypographyComponent },
+    { path: 'icons', component: IconsComponent },
+    { path: 'maps', component: MapsComponent },
+    { path: 'notifications', component: NotificationsComponent },
+    { path: 'upgrade', component: UpgradeComponent },
+];

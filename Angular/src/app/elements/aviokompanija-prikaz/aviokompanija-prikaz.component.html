@@ -1,0 +1,65 @@
+
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="header">
+                      <h4 class="title">Detalji</h4>
+                      <p class="category">Detalji opis</p>
+                  </div>
+                  <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                              <!--<thead>
+                                  <tr>
+                                      <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                  </tr>
+                              </thead>-->
+                              <tbody>
+                                  <!--<tr *ngFor="let row of tableData1.dataRows">
+                                      <td *ngFor="let cell of row">{{cell}}</td>
+                                  </tr>-->
+                                  <tr>
+                                    <th >Naziv</th>
+                                    <td>{{ aviokompanija.naziv }}</td>                                
+                                  </tr>
+                                  <tr>
+                                      <th >Adresa</th>
+                                      <td>{{ aviokompanija.adresa }}</td>                                
+                                  </tr>
+                                  <tr>
+                                      <th >Promotivni opis</th>
+                                      <td>{{ aviokompanija.promotivniOpis }}</td>                                
+                                  </tr>
+                                  <tr>
+                                    <th>Destinacija</th>
+                                    <td>{{aviokompanija.destinacije}}</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Letovi</th>
+                                    <td>{{aviokompanija.letovi}}</td>
+                                  </tr>
+                                  <tr>
+                                      <th>Spisak karata sa popustima</th>
+                                      <td>{{aviokompanija.spisakKarata}}</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Konfiguracija segmenata i mesta</th>
+                                      <td>{{aviokompanija.konfiguracija}}</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Cenovnik</th>
+                                      <td>{{aviokompanija.cenovnik}}</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Prtljag</th>
+                                      <td>{{aviokompanija.prtljag}}</td>
+                                    </tr>
+                              </tbody>
+                        </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<!--<div class="container-fluid">
+    
+  <br>
+
+  <h4>Letovi</h4>
+
+  <br>
+
+  <table class="table table-striped table-bordered table-hover">
+      <thead class="thead-dark">
+          <th>Mesto poletanja</th>
+          <th>Mesto sletanja</th>
+          <th>Operacije</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let l of letovi">
+              <td>{{l.mestoPoletanja}}</td>
+              <td>{{l.mestoSletanja}}</td>
+              <td>
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-4">
+                              <button class="btn btn-dark" (click)="display(l)">Prikazi</button>
+                          </div>
+                          <br>
+                          <div class="col-4">
+                              <button class="btn btn-danger">Rezervisi</button>
+                          </div>
+                          <br>
+                          <div class="col-4">
+                              <button class="btn btn-light" >Oceni</button>
+                          </div>
+                      </div>
+                  </div>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>-->
+
+  <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Letovi</h4>
+                            <p class="category">Letovi opis</p>
+                        </div>
+                        <div class="content table-responsive table-full-width">
+                              <table class="table table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--<tr *ngFor="let row of tableData1.dataRows">
+                                            <td *ngFor="let cell of row">{{cell}}</td>
+                                        </tr>-->
+                                        <tr *ngFor="let l of letovi">
+                                                <td>{{l.mestoPoletanja}}</td>
+                                                <td>{{l.mestoSletanja}}</td>
+                                                <td>
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <button class="btn btn-dark" (click)="display(l)">Prikazi</button>
+                                                            </div>
+                                                            <br>
+                                                            <div class="col-md-4">
+                                                                <button class="btn btn-danger">Rezervisi</button>
+                                                            </div>
+                                                            <br>
+                                                            <div class="col-md-4">
+                                                                <button class="btn btn-light" >Oceni</button>
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                              </table>
+      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
