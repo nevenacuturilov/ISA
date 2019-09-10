@@ -30,4 +30,10 @@ export class LetComponent implements OnInit {
     this.router.navigate(['/letovi']);
   }
 
+  rez(ll: Let) {
+    this.letService.setter(ll);
+    this.router.navigate(['/rezervisi']);
+
+  }
+
 }

@@ -34,6 +34,12 @@ import { PrijavaComponent } from 'app/elements/prijava/prijava.component';
 import { DestinacijeComponent } from 'app/elements/destinacije/destinacije.component';
 import { AtinaComponent } from 'app/elements/destinacije/atina/atina.component';
 import { RimComponent } from 'app/elements/destinacije/rim/rim.component';
+import { RezervisiComponent } from 'app/elements/rezervisi/rezervisi.component';
+import { RezervacijaComponent } from 'app/elements/rezervacija/rezervacija.component';
+import { RezervacijeComponent } from 'app/elements/rezervacije/rezervacije.component';
+
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 @NgModule({
@@ -42,7 +48,8 @@ import { RimComponent } from 'app/elements/destinacije/rim/rim.component';
     RouterModule.forChild(LayoutRoutes),
     FormsModule,
     LbdModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'}),
+    Ng2SearchPipeModule
   ],
   declarations: [
     HomeComponent,
@@ -69,6 +76,9 @@ import { RimComponent } from 'app/elements/destinacije/rim/rim.component';
     DestinacijeComponent,
     AtinaComponent,
     RimComponent,
+    RezervisiComponent,
+    RezervacijaComponent,
+    RezervacijeComponent,
   ],
   providers: [KorisnikService],
 })

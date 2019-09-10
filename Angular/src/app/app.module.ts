@@ -15,6 +15,8 @@ import { LayoutComponent } from './layout/layout.component';
 // da li treba? i da li treba i ostalo?
 import { KorisnikService } from './services/korisnik.service';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -24,12 +26,12 @@ import { KorisnikService } from './services/korisnik.service';
     UpbarModule,
     FooterModule,
     SidebarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [
     AppComponent,
     LayoutComponent,
-
   ],
   providers: [KorisnikService],
   bootstrap: [AppComponent]

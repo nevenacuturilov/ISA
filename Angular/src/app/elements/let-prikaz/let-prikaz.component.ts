@@ -29,5 +29,7 @@ export class LetPrikazComponent implements OnInit {
     this.router.navigate(['/prikaz-letovi']);
   }
 
+  rez() {
+  }
 
 }

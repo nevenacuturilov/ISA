@@ -29,14 +29,16 @@ export class PrijavaComponent implements OnInit {
 
     this.korisnikService.getUsers().subscribe((users) => {
       this.korisnici = users;
-      // console.log('inicijalizacija ' + this.korisnici);
+      console.log('L ' + this.korisnici.length);
+
+      console.log('inicijalizacija ' + this.korisnici);
     }, (error) => {
       console.log(error);
     });
 
     this.adminService.getAdmins().subscribe((administrators) => {
       this.admini = administrators;
-      // console.log('inicijalizacija ' + this.admini);
+      console.log('inicijalizacija ' + this.admini);
     }, (error) => {
       console.log(error);
     });
@@ -54,10 +56,11 @@ export class PrijavaComponent implements OnInit {
 
       for (let i = 0; i < this.korisnici.length; i++) {
         if (this.korisnik.username === this.korisnici[i].username && this.korisnik.password === this.korisnici[i].password) {
+          console.log('L ' + this.korisnici.length);
 
           this.korisnik = this.korisnici[i];
           this.korisnikService.setter(this.korisnik);
-          // console.log('login ' + this.korisnik.ime);
+           console.log('login ' + this.korisnik.ime);
           this.router.navigate(['/korisnik-profil']);
         } else {
 

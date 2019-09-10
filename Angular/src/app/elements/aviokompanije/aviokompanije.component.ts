@@ -53,4 +53,14 @@ export class AviokompanijeComponent implements OnInit {
     this.router.navigate(['/aviokompanija-prikaz']);
   }
 
+  destinacije() {
+    // this.aviokompanijaService.setter(aviokompanija);
+    this.router.navigate(['/destinacije']);
+  }
+
+  spisakLetova() {
+    // this.aviokompanijaService.setter(aviokompanija);
+    this.router.navigate(['/letovi']);
+  }
+
 }

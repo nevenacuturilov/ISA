@@ -25,6 +25,9 @@ import { PrijavaComponent } from 'app/elements/prijava/prijava.component';
 import { DestinacijeComponent } from 'app/elements/destinacije/destinacije.component';
 import { AtinaComponent } from 'app/elements/destinacije/atina/atina.component';
 import { RimComponent } from 'app/elements/destinacije/rim/rim.component';
+import { RezervisiComponent } from 'app/elements/rezervisi/rezervisi.component';
+import { RezervacijaComponent } from 'app/elements/rezervacija/rezervacija.component';
+import { RezervacijeComponent } from 'app/elements/rezervacije/rezervacije.component';
 
 export const LayoutRoutes: Routes = [
     { path: 'pocetna-stranica', component: PocetnaStranicaComponent },
@@ -51,4 +54,8 @@ export const LayoutRoutes: Routes = [
     { path: 'maps', component: MapsComponent },
     { path: 'notifications', component: NotificationsComponent },
     { path: 'upgrade', component: UpgradeComponent },
+    { path: 'rezervisi', component: RezervisiComponent },
+    { path: 'rezervacija', component: RezervacijaComponent },
+    { path: 'rezervacije', component: RezervacijeComponent },
+
 ];

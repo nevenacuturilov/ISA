@@ -1,5 +1,6 @@
 
 import { Aviokompanija } from './aviokompanija';
+import { Sediste } from './sediste';
 
 export class Let {
   id: number;
@@ -15,4 +16,5 @@ export class Let {
   lokacijePresedanja: string[] = [];
   cenaKarte: number;
   aviokompanija: Aviokompanija;
+  konfiguracijaSedista: Sediste[] = [];
 }

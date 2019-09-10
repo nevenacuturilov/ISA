@@ -38,11 +38,14 @@ public class Let {
     @JoinColumn(name = "aid", referencedColumnName = "id", insertable = false, updatable = false)
     private Aviokompanija aviokompanija;
 
+    @OneToMany(mappedBy = "let", fetch = FetchType.LAZY)
+    private List<Sediste> konfiguracijaSedista;
+
     public Let() {
     }
 
     public Let(String mestoPoletanja, String mestoSletanja, String datumPoletanja, String vremePoletanja, String datumSletanja, String vremeSletanja, String vremePutovanja,
-               String duzinaPutovanja, Integer brojPresedanja, List<String> lokacijePresedanja, Integer cenaKarte) {
+               String duzinaPutovanja, Integer brojPresedanja, List<String> lokacijePresedanja, Integer cenaKarte, List<Sediste> konfiguracijaSedista) {
         this.mestoPoletanja = mestoPoletanja;
         this.mestoSletanja = mestoSletanja;
         this.datumPoletanja = datumPoletanja;
@@ -54,6 +57,7 @@ public class Let {
         this.brojPresedanja = brojPresedanja;
         this.lokacijePresedanja = lokacijePresedanja;
         this.cenaKarte = cenaKarte;
+        this.konfiguracijaSedista = konfiguracijaSedista;
     }
 
     public String getMestoPoletanja() {
@@ -160,4 +164,11 @@ public class Let {
         this.aviokompanija = aviokompanija;
     }
 
+    public List<Sediste> getKonfiguracijaSedista() {
+        return konfiguracijaSedista;
+    }
+
+    public void setKonfiguracijaSedista(List<Sediste> konfiguracijaSedista) {
+        this.konfiguracijaSedista = konfiguracijaSedista;
+    }
 }

@@ -24,14 +24,17 @@ export class LetoviComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.leet = this.letService.getter();
+
     this.letService.getFlights().subscribe((flight) => {
       this.letovi = flight;
+      console.log(this.letovi);
     }, (error) => {
       console.log(error);
     });
 
     this.tableData1 = {
-      headerRow: [ 'Mesto poletanja', 'Mesto sletanja', 'Operacije'/*, 'City', 'Salary'*/],
+      headerRow: [ 'Mesto poletanja', 'Mesto sletanja', 'Datum poletanja', 'Datum sletanja'/*, 'Salary'*/],
       dataRows: [
           ['1', 'Dakota Rice', 'Niger', 'Oud-Turnhout', '$36,738'],
           ['2', 'Minerva Hooper', 'Curaçao', 'Sinaai-Waas', '$23,789'],
@@ -43,10 +46,22 @@ export class LetoviComponent implements OnInit {
   };
   }
 
+  ll() {
+    console.log('KLIK');
+  }
+
+  jos() {
+    console.log('JOS');
+  }
+
   display(l: Let) {
     this.letService.setter(l);
     this.router.navigate(['/let']);
   }
 
+  r(l: Let) {
+    this.letService.setter(l);
+    this.router.navigate(['/rezervisi']);
+  }
 
 }

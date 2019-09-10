@@ -43,7 +43,7 @@ public class LetController {
     }
 
     @PutMapping("/let")
-    public Let updateKorisnik(@RequestBody Let let) {
+    public Let updateLet(@RequestBody Let let) {
 
         return letRepository.save(let);
     }
