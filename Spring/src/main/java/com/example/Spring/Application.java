@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.ArrayList;
 import java.util.List;
 
-@SpringBootApplication
+@SpringBootApplication()
 public class Application implements CommandLineRunner {
 
     @Autowired
@@ -47,30 +47,57 @@ public class Application implements CommandLineRunner {
         List<Sediste> konfiguracijaSedista = new ArrayList<Sediste>();
         Sediste sedistea1 = new Sediste("A1", false, "One way", 2, "Economy", 50);
         Sediste sedistea2 = new Sediste("A2", false, "One way", 2, "Economy", 50);
+        Sediste sedistea3 = new Sediste("A3", false, "One way", 2, "Economy", 50);
+        Sediste sedistea4 = new Sediste("A4", false, "One way", 2, "Economy", 50);
+
         Sediste sedisteb1 = new Sediste("B1", false, "One way", 2, "Economy", 50);
         Sediste sedisteb2 = new Sediste("B2", false, "One way", 2, "Economy", 50);
+        Sediste sedisteb3 = new Sediste("B3", false, "One way", 2, "Economy", 50);
+        Sediste sedisteb4 = new Sediste("B4", false, "One way", 2, "Economy", 50);
+
         Sediste sedistec1 = new Sediste("C1", false, "One way", 2, "Economy", 50);
         Sediste sedistec2 = new Sediste("C2", false, "One way", 2, "Economy", 50);
+        Sediste sedistec3 = new Sediste("C3", false, "One way", 2, "Economy", 50);
+        Sediste sedistec4 = new Sediste("C4", false, "One way", 2, "Economy", 50);
+
         Sediste sedisted1 = new Sediste("D1", false, "One way", 2, "Economy", 50);
         Sediste sedisted2 = new Sediste("D2", false, "One way", 2, "Economy", 50);
+        Sediste sedisted3 = new Sediste("D3", false, "One way", 2, "Economy", 50);
+        Sediste sedisted4 = new Sediste("D4", false, "One way", 2, "Economy", 50);
 
         sedisteRepository.save(sedistea1);
         sedisteRepository.save(sedistea2);
+        sedisteRepository.save(sedistea3);
+        sedisteRepository.save(sedistea4);
         sedisteRepository.save(sedisteb1);
         sedisteRepository.save(sedisteb2);
+        sedisteRepository.save(sedisteb3);
+        sedisteRepository.save(sedisteb4);
         sedisteRepository.save(sedistec1);
         sedisteRepository.save(sedistec2);
+        sedisteRepository.save(sedistec3);
+        sedisteRepository.save(sedistec4);
         sedisteRepository.save(sedisted1);
         sedisteRepository.save(sedisted2);
+        sedisteRepository.save(sedisted3);
+        sedisteRepository.save(sedisted4);
 
         konfiguracijaSedista.add(sedistea1);
         konfiguracijaSedista.add(sedistea2);
+        konfiguracijaSedista.add(sedistea3);
+        konfiguracijaSedista.add(sedistea4);
         konfiguracijaSedista.add(sedisteb1);
         konfiguracijaSedista.add(sedisteb2);
+        konfiguracijaSedista.add(sedisteb3);
+        konfiguracijaSedista.add(sedisteb4);
         konfiguracijaSedista.add(sedistec1);
         konfiguracijaSedista.add(sedistec2);
+        konfiguracijaSedista.add(sedistec3);
+        konfiguracijaSedista.add(sedistec4);
         konfiguracijaSedista.add(sedisted1);
         konfiguracijaSedista.add(sedisted2);
+        konfiguracijaSedista.add(sedisted3);
+        konfiguracijaSedista.add(sedisted4);
 
         //LETOVI
 

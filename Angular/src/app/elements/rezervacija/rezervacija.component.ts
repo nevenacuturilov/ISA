@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Sediste } from 'app/models/sediste';
 import { SedisteService } from 'app/services/sediste.service';
 import { Router } from '@angular/router';
+import { AviokompanijaService } from 'app/services/aviokompanija.service';
+import { LetService } from 'app/services/let.service';
+import { Let } from 'app/models/let';
+import { Aviokompanija } from 'app/models/aviokompanija';
 
 declare interface TableData {
   headerRow: string[];
@@ -16,27 +20,42 @@ declare interface TableData {
 export class RezervacijaComponent implements OnInit {
 
   private sedistaRez: Sediste[];
+
   private sediste: Sediste;
 
   public tableData1: TableData;
 
+  private leet: Let;
+  private a: Aviokompanija;
 
-  constructor(private sedisteService: SedisteService, private router: Router) { }
+  constructor(private sedisteService: SedisteService, private router: Router,
+    private aviokompanijaService: AviokompanijaService, private letService: LetService) { }
 
   ngOnInit() {
 
-    this.sedistaRez = this.sedisteService.getterR();
+    this.leet = this.letService.getter();
+    console.log('Inicijalizacija' + this.leet);
 
-    this.sedisteService.getSeats().subscribe((seats) => {
+    this.a = this.aviokompanijaService.getter();
+    console.log('InicijalizacijAAAAAAAAAAAAAAAAAAAAAAaaa' + this.a);
+
+    this.sedistaRez = this.sedisteService.getterR();
+    for (let j = 0; j < this.sedistaRez.length; j++) {
+      console.log(this.sedistaRez[j].oznaka)
+      console.log(this.sedistaRez[j].boja)
+      console.log('\n')
+    }
+
+    /*this.sedisteService.getSeats().subscribe((seats) => {
       this.sedistaRez = seats;
-      // console.log('L ' + this.sedista.length);
-      // console.log('Inicijalizacija' + seats);
+      console.log('L ' + this.sedistaRez.length)
+      console.log('Inicijalizacija' + this.sedistaRez);
     }, (error) => {
       console.log(error);
-    });
+    });*/
 
     this.tableData1 = {
-      headerRow: [ 'Aviokompanija', 'Let', 'Oznaka sedista', 'Ime', 'Prezime', 'Broj pasosa'],
+      headerRow: [ 'Aviokompanija', 'Let od',  'Let do', 'Oznaka sedista', 'Ime', 'Prezime', 'Broj pasosa'],
       dataRows: [
           ['1', 'Dakota Rice', 'Niger', 'Oud-Turnhout', '$36,738'],
           ['2', 'Minerva Hooper', 'Curaçao', 'Sinaai-Waas', '$23,789'],

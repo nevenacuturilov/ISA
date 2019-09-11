@@ -5,8 +5,8 @@
           <div class="col-md-8">
               <div class="card">
                   <div class="header">
-                      <h4 class="title">Rezervacije</h4>
-                      <p class="category">Rezervcije opis</p>
+                      <h4 class="title">VasarRezervacija</h4>
+                      <p class="category">Vasa rezervcija opis</p>
                   </div>
                   <div class="content table-responsive table-full-width">
                         <table class="table table-hover table-striped">
@@ -20,8 +20,9 @@
                                       <td *ngFor="let cell of row">{{cell}}</td>
                                   </tr>-->
                                   <tr *ngFor="let s of sedistaRez">
-                                      <td>dd</td>
-                                      <td>dd</td>
+                                      <td></td>
+                                      <td>{{leet.mestoPoletanja}}</td>
+                                      <td>{{leet.mestoSletanja}}</td>
                                       <td>{{s.oznaka}}</td>
                                       <td>{{s.ime}}</td>
                                       <td>{{s.prezime}}</td>

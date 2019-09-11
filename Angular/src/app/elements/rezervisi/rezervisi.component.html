@@ -7,96 +7,126 @@
                         <h4 class="title">Rezervacija sedista</h4>
                     </div>
                     <div class="content table-responsive table-full-width">
-                        <!--<form>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <label>Korisnicko ime</label>
-                                    <input type="text" class="form-control" placeholder="Korisnicko ime" [(ngModel)]="korisnik.username" name="username">
-                                </div>
-                            </div>
-                        </div>
+
+
 
                         <div class="row">
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <label>Sifra</label>
-                                    <input type="password" class="form-control" placeholder="Sifra" [(ngModel)]="korisnik.password" name="password">
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-md-8">
-                            <button type="submit" class="btn btn-info btn-fill pull-right">Prijava</button>
-                            <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-8">
-                                <p> Niste registrovani?
-                                    <a [routerLink]="['/registracija']"> Registracija </a>
-                                </p>
-                            </div>
-                            </div>
-
-                    </form>-->
-                        <table class="table table-hover table-striped">
-                            <!--<thead>
+                            <div class="col-md-4">
+                                <table class="table table-hover table-striped">
+                                    <tbody>
                                         <tr>
-                                                <td></td>
-                                                <td>1</td>
-                                                <td>2</td>
-                                            </tr>
-                                </thead>-->
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <button class="btn btn-light btn-fill"
-                                            [style.background-color]="buttonColorr[0]"
-                                            (click)="kliki(0)">{{sedista[0]?.oznaka}}</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-light btn-fill"
-                                            [style.background-color]="buttonColorr[1]"
-                                            (click)="kliki(1)">{{sedista[1]?.oznaka}}</button>
-                                    </td>
-                                </tr>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[0]"
+                                                    (click)="kliki(0)">{{sedista[0]?.oznaka}}</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[1]"
+                                                    (click)="kliki(1)">{{sedista[1]?.oznaka}}</button>
+                                            </td>
+                                        </tr>
 
-                                <tr>
-                                    <td>
-                                        <button class="btn btn-light btn-fill" [style.background-color]="buttonColorr[2]"
-                                            (click)="kliki(2)">{{sedista[2]?.oznaka}}</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-light btn-fill" [style.background-color]="buttonColor"
-                                            (click)="klik()">{{sedista[3]?.oznaka}}</button>
-                                    </td>
-                                </tr>
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[2]"
+                                                    (click)="kliki(2)">{{sedista[2]?.oznaka}}</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[3]"
+                                                    (click)="kliki(3)">{{sedista[3]?.oznaka}}</button>
+                                            </td>
+                                        </tr>
 
-                                <tr>
-                                    <td>
-                                        <button class="btn btn-light btn-fill" [style.background-color]="buttonColor"
-                                            (click)="klik()">{{sedista[4]?.oznaka}}</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-light btn-fill" [style.background-color]="buttonColor"
-                                            (click)="klik()">{{sedista[5]?.oznaka}}</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button class="btn btn-light btn-fill" [style.background-color]="buttonColor"
-                                            (click)="klik()">{{sedista[6]?.oznaka}}</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-light btn-fill" [style.background-color]="buttonColor"
-                                            (click)="klik()">{{sedista[7]?.oznaka}}</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[4]"
+                                                    (click)="kliki(4)">{{sedista[4]?.oznaka}}</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[5]"
+                                                    (click)="kliki(5)">{{sedista[5]?.oznaka}}</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[6]"
+                                                    (click)="kliki(6)">{{sedista[6]?.oznaka}}</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[7]"
+                                                    (click)="kliki(7)">{{sedista[7]?.oznaka}}</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <table class="table table-hover table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[8]"
+                                                    (click)="kliki(8)">{{sedista[8]?.oznaka}}</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[9]"
+                                                    (click)="kliki(9)">{{sedista[9]?.oznaka}}</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[10]"
+                                                    (click)="kliki(10)">{{sedista[10]?.oznaka}}</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[11]"
+                                                    (click)="kliki(11)">{{sedista[11]?.oznaka}}</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[12]"
+                                                    (click)="kliki(12)">{{sedista[12]?.oznaka}}</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[13]"
+                                                    (click)="kliki(13)">{{sedista[13]?.oznaka}}</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[14]"
+                                                    (click)="kliki(14)">{{sedista[14]?.oznaka}}</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-light btn-fill"
+                                                    [style.background-color]="buttonColorr[15]"
+                                                    (click)="kliki(15)">{{sedista[15]?.oznaka}}</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
 
                         <div class="row">
@@ -173,7 +203,8 @@
                                                                                     <label>Ime</label>
                                                                                     <input type="text"
                                                                                         class="form-control"
-                                                                                        placeholder="Ime" [(ngModel)]="x.ime" name="ime">
+                                                                                        placeholder="Ime"
+                                                                                        [(ngModel)]="x.ime" name="ime">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-3">
@@ -181,7 +212,9 @@
                                                                                     <label>Prezime</label>
                                                                                     <input type="text"
                                                                                         class="form-control"
-                                                                                        placeholder="Prezime" [(ngModel)]="x.prezime" name="prezime">
+                                                                                        placeholder="Prezime"
+                                                                                        [(ngModel)]="x.prezime"
+                                                                                        name="prezime">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-3">
@@ -189,7 +222,9 @@
                                                                                     <label>Broj pasosa</label>
                                                                                     <input type="text"
                                                                                         class="form-control"
-                                                                                        placeholder="Broj pasosa" [(ngModel)]="x.brojPasosa" name="brojPasosa">
+                                                                                        placeholder="Broj pasosa"
+                                                                                        [(ngModel)]="x.brojPasosa"
+                                                                                        name="brojPasosa">
                                                                                 </div>
                                                                             </div>
                                                                         </div>

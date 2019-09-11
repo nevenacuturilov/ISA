@@ -63,8 +63,11 @@ export class PrijateljiComponent implements OnInit {
     console.log('add');
     console.log(korisnik.email);
 
+    this.korisnikService.updateUser(korisnik).subscribe((flight) => {
+    }, (error) => {
+      console.log(error);
+    });
 
-    this.korisnikService.updateUser(korisnik);
     // this.mailService.notifyUser(korisnik)
   }
 

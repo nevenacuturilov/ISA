@@ -19,6 +19,8 @@ public class Korisnik {
     private String grad;
     private String brojTelefona;
     private Boolean aktivan;
+    private Boolean prihvatio;
+
 
     public Korisnik() {
     }
@@ -32,6 +34,7 @@ public class Korisnik {
         this.grad = grad;
         this.brojTelefona = brojTelefona;
         this.aktivan = aktivan;
+
     }
 
     public Integer getId() {
@@ -104,5 +107,13 @@ public class Korisnik {
 
     public void setAktivan(Boolean aktivan) {
         this.aktivan = aktivan;
+    }
+
+    public Boolean getPrihvatio() {
+        return prihvatio;
+    }
+
+    public void setPrihvatio(Boolean prihvatio) {
+        this.prihvatio = prihvatio;
     }
 }

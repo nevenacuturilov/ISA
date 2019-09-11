@@ -59,7 +59,7 @@ export class AviokompanijeComponent implements OnInit {
   }
 
   spisakLetova() {
-    // this.aviokompanijaService.setter(aviokompanija);
+    this.aviokompanijaService.setter(this.a);
     this.router.navigate(['/letovi']);
   }
 

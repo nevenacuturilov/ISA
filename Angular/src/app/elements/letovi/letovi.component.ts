@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Let } from 'app/models/let';
 import { LetService } from 'app/services/let.service';
 import { Router } from '@angular/router';
+import { AviokompanijaService } from 'app/services/aviokompanija.service';
+import { Aviokompanija } from 'app/models/aviokompanija';
 
 declare interface TableData {
   headerRow: string[];
@@ -20,11 +22,15 @@ export class LetoviComponent implements OnInit {
   public tableData1: TableData;
   public tableData2: TableData;
 
-  constructor(private letService: LetService, private router: Router) {
+  private a: Aviokompanija;
+
+
+  constructor(private letService: LetService, private aviokompanijaService: AviokompanijaService, private router: Router) {
   }
 
   ngOnInit() {
     this.leet = this.letService.getter();
+    this.a = this.aviokompanijaService.getter()
 
     this.letService.getFlights().subscribe((flight) => {
       this.letovi = flight;
@@ -32,6 +38,7 @@ export class LetoviComponent implements OnInit {
     }, (error) => {
       console.log(error);
     });
+
 
     this.tableData1 = {
       headerRow: [ 'Mesto poletanja', 'Mesto sletanja', 'Datum poletanja', 'Datum sletanja'/*, 'Salary'*/],
@@ -60,6 +67,7 @@ export class LetoviComponent implements OnInit {
   }
 
   r(l: Let) {
+    this.aviokompanijaService.setter(this.a);
     this.letService.setter(l);
     this.router.navigate(['/rezervisi']);
   }
