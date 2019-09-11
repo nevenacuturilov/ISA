@@ -26,7 +26,6 @@ public class AviokompanijaController {
 
         //upitno da li radi
         return aviokompanijaRepository.findById(id).get();
-
     }
 
     @DeleteMapping("/aviokompanija/{id}")

@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { LbdModule } from '../lbd/lbd.module';
+import { LbdModule } from '../elements/tema/lbd/lbd.module';
 import { NguiMapModule} from '@ngui/map';
 
 import { LayoutRoutes } from './layout.routing';
@@ -37,10 +37,20 @@ import { RimComponent } from 'app/elements/destinacije/rim/rim.component';
 import { RezervisiComponent } from 'app/elements/rezervisi/rezervisi.component';
 import { RezervacijaComponent } from 'app/elements/rezervacija/rezervacija.component';
 import { RezervacijeComponent } from 'app/elements/rezervacije/rezervacije.component';
+import { PrijateljiComponent } from 'app/elements/prijatelji/prijatelji.component';
+import { HoteliComponent } from 'app/elements/hoteli/hoteli.component';
+import { RentACarServisiComponent } from 'app/elements/rent-a-car-servisi/rent-a-car-servisi.component';
+import { AaProfilComponent } from 'app/elements/aa-profil/aa-profil.component';
+import { AaAviokompanijeComponent } from 'app/elements/aa-aviokompanije/aa-aviokompanije.component';
+import { AaLetoviComponent } from 'app/elements/aa-letovi/aa-letovi.component';
+import { AaLetComponent } from 'app/elements/aa-let/aa-let.component';
+import { AaAviokompanijaComponent } from 'app/elements/aa-aviokompanija/aa-aviokompanija.component';
+import { AaAviokompanijaUrediComponent } from 'app/elements/aa-aviokompanija-uredi/aa-aviokompanija-uredi.component';
+import { AaLetUrediComponent } from 'app/elements/aa-let-uredi/aa-let-uredi.component';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
-
+import { AaHomeComponent } from 'app/elements/aa-home/aa-home.component';
+import { MailService } from 'app/services/mail.service';
 
 @NgModule({
   imports: [
@@ -79,8 +89,19 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     RezervisiComponent,
     RezervacijaComponent,
     RezervacijeComponent,
+    PrijateljiComponent,
+    HoteliComponent,
+    RentACarServisiComponent,
+    AaProfilComponent,
+    AaAviokompanijeComponent,
+    AaLetoviComponent,
+    AaLetComponent,
+    AaAviokompanijaComponent,
+    AaAviokompanijaUrediComponent,
+    AaLetUrediComponent,
+    AaHomeComponent,
   ],
-  providers: [KorisnikService],
+  providers: [KorisnikService, MailService],
 })
 
 export class LayoutModule {}

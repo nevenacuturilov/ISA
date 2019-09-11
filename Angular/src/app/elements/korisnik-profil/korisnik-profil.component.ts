@@ -18,6 +18,7 @@ export class KorisnikProfilComponent implements OnInit {
 
   ngOnInit() {
     this.korisnik = this.korisnikService.getter();
+    console.log('EMAIL' + this.korisnik.email);
 
     this.korisnikService.getUsers().subscribe((users) => {
       this.korisnici = users;
@@ -26,10 +27,13 @@ export class KorisnikProfilComponent implements OnInit {
     });
   }
 
-  edit() {
-    /*this.korisnikService.setter(this.korisnik);
-    console.log('edit' + this.korisnik);*/
-    this.router.navigate(['/home', { outlets: { h: 'uredi-profil' } }]);
+  save() {
+    this.korisnikService.updateUser(this.korisnik).subscribe((user) => {
+      this.router.navigate(['/korisnik-profil']);
+    },
+      (error) => {
+        console.log(error);
+      });
   }
 
 }

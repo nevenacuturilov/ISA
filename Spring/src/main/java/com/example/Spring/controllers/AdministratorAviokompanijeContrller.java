@@ -26,7 +26,6 @@ public class AdministratorAviokompanijeContrller {
 
         //upitno da li radi
         return administratorAviokompanijeRepository.findById(id).get();
-
     }
 
     @DeleteMapping("/administratorAviokompanije/{id}")

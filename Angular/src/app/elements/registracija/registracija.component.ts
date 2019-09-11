@@ -41,7 +41,15 @@ export class RegistracijaComponent implements OnInit {
     });
   }
 
-  reg() {
+  registar() {
+    if (this.korisnik.id === undefined) {
+      this.korisnikService.createUser(this.korisnik).subscribe((user) => {
+        this.router.navigate(['/pocetna-stranica']);
+      }, (error) => {
+        console.log(error);
+      });
+    }
+
     console.log('regstracija');
   }
 }

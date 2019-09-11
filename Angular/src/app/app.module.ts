@@ -16,6 +16,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { KorisnikService } from './services/korisnik.service';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { MailService } from './services/mail.service';
 
 @NgModule({
   imports: [
@@ -33,7 +34,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AppComponent,
     LayoutComponent,
   ],
-  providers: [KorisnikService],
+  providers: [KorisnikService, MailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

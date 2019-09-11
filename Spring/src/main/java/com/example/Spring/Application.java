@@ -33,10 +33,10 @@ public class Application implements CommandLineRunner {
 
         //KORISNICI
 
-        korisnikRepository.save(new Korisnik("a", "a", "a", "a", "a", "a"));
-        korisnikRepository.save(new Korisnik("s", "s", "s", "s", "s", "s"));
-        korisnikRepository.save(new Korisnik("x", "x", "x", "x", "x", "x"));
-        korisnikRepository.save(new Korisnik("q", "q", "q", "q", "q", "q"));
+        korisnikRepository.save(new Korisnik("a", "a", "anabelaajsov22@gmail.com", "a", "a", "a", "a", false));
+        korisnikRepository.save(new Korisnik("s", "s", "s", "s", "s", "s", "s", false));
+        korisnikRepository.save(new Korisnik("x", "x", "x", "x", "x", "x", "x", false));
+        korisnikRepository.save(new Korisnik("q", "q", "q", "q", "q", "q", "q", false));
 
         List<String> lokacijePresedanja = new ArrayList<String>();
         lokacijePresedanja.add("Bec");
@@ -45,14 +45,14 @@ public class Application implements CommandLineRunner {
         lokacijePresedanja.add("Moskava");
 
         List<Sediste> konfiguracijaSedista = new ArrayList<Sediste>();
-        Sediste sedistea1 = new Sediste("A1", false);
-        Sediste sedistea2 = new Sediste("A2", false);
-        Sediste sedisteb1 = new Sediste("B1", false);
-        Sediste sedisteb2 = new Sediste("B2", false);
-        Sediste sedistec1 = new Sediste("C1", false);
-        Sediste sedistec2 = new Sediste("C2", false);
-        Sediste sedisted1 = new Sediste("D1", false);
-        Sediste sedisted2 = new Sediste("D2", false);
+        Sediste sedistea1 = new Sediste("A1", false, "One way", 2, "Economy", 50);
+        Sediste sedistea2 = new Sediste("A2", false, "One way", 2, "Economy", 50);
+        Sediste sedisteb1 = new Sediste("B1", false, "One way", 2, "Economy", 50);
+        Sediste sedisteb2 = new Sediste("B2", false, "One way", 2, "Economy", 50);
+        Sediste sedistec1 = new Sediste("C1", false, "One way", 2, "Economy", 50);
+        Sediste sedistec2 = new Sediste("C2", false, "One way", 2, "Economy", 50);
+        Sediste sedisted1 = new Sediste("D1", false, "One way", 2, "Economy", 50);
+        Sediste sedisted2 = new Sediste("D2", false, "One way", 2, "Economy", 50);
 
         sedisteRepository.save(sedistea1);
         sedisteRepository.save(sedistea2);
@@ -128,7 +128,7 @@ public class Application implements CommandLineRunner {
 
         //ADMINISTRATORI
 
-        administratorAviokompanijeRepository.save(new AdministratorAviokompanije("z", "z", "z", "z"));
+        administratorAviokompanijeRepository.save(new AdministratorAviokompanije("z", "z", "z", "z", "z","z", "z", false));
 
     }
 

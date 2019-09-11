@@ -23,12 +23,24 @@ public class Sediste {
 
     private String brojPasosa;
 
+    private String tipPuta;
+
+    private Integer brojOsoba;
+
+    private String klasa;
+
+    private Integer kolicinaPrtljaga;
+
     public Sediste() {
     }
 
-    public Sediste(String oznaka, Boolean rezervisao) {
+    public Sediste(String oznaka, Boolean rezervisao, String tipPuta, Integer brojOsoba, String klasa, Integer kolicinaPrtljaga) {
         this.oznaka = oznaka;
         this.rezervisao = rezervisao;
+        this.tipPuta = tipPuta;
+        this.brojOsoba = brojOsoba;
+        this.klasa = klasa;
+        this.kolicinaPrtljaga = kolicinaPrtljaga;
     }
 
     public Integer getId() {
@@ -83,5 +95,37 @@ public class Sediste {
 
     public void setBrojPasosa(String brojPasosa) {
         this.brojPasosa = brojPasosa;
+    }
+
+    public String getTipPuta() {
+        return tipPuta;
+    }
+
+    public void setTipPuta(String tipPuta) {
+        this.tipPuta = tipPuta;
+    }
+
+    public Integer getBrojOsoba() {
+        return brojOsoba;
+    }
+
+    public void setBrojOsoba(Integer brojOsoba) {
+        this.brojOsoba = brojOsoba;
+    }
+
+    public String getKlasa() {
+        return klasa;
+    }
+
+    public void setKlasa(String klasa) {
+        this.klasa = klasa;
+    }
+
+    public Integer getKolicinaPrtljaga() {
+        return kolicinaPrtljaga;
+    }
+
+    public void setKolicinaPrtljaga(Integer kolicinaPrtljaga) {
+        this.kolicinaPrtljaga = kolicinaPrtljaga;
     }
 }

@@ -28,6 +28,17 @@ import { RimComponent } from 'app/elements/destinacije/rim/rim.component';
 import { RezervisiComponent } from 'app/elements/rezervisi/rezervisi.component';
 import { RezervacijaComponent } from 'app/elements/rezervacija/rezervacija.component';
 import { RezervacijeComponent } from 'app/elements/rezervacije/rezervacije.component';
+import { RentACarServisiComponent } from 'app/elements/rent-a-car-servisi/rent-a-car-servisi.component';
+import { PrijateljiComponent } from 'app/elements/prijatelji/prijatelji.component';
+import { HoteliComponent } from 'app/elements/hoteli/hoteli.component';
+import { AaProfilComponent } from 'app/elements/aa-profil/aa-profil.component';
+import { AaAviokompanijeComponent } from 'app/elements/aa-aviokompanije/aa-aviokompanije.component';
+import { AaLetoviComponent } from 'app/elements/aa-letovi/aa-letovi.component';
+import { AaAviokompanijaComponent } from 'app/elements/aa-aviokompanija/aa-aviokompanija.component';
+import { AaLetComponent } from 'app/elements/aa-let/aa-let.component';
+import { AaAviokompanijaUrediComponent } from 'app/elements/aa-aviokompanija-uredi/aa-aviokompanija-uredi.component';
+import { AaLetUrediComponent } from 'app/elements/aa-let-uredi/aa-let-uredi.component';
+import { AaHomeComponent } from 'app/elements/aa-home/aa-home.component';
 
 export const LayoutRoutes: Routes = [
     { path: 'pocetna-stranica', component: PocetnaStranicaComponent },
@@ -57,5 +68,18 @@ export const LayoutRoutes: Routes = [
     { path: 'rezervisi', component: RezervisiComponent },
     { path: 'rezervacija', component: RezervacijaComponent },
     { path: 'rezervacije', component: RezervacijeComponent },
+    { path: 'prijatelji', component: PrijateljiComponent },
+    { path: 'hoteli', component: HoteliComponent },
+    { path: 'rent-a-car-servisi', component: RentACarServisiComponent },
+
+    { path: 'aa-profil', component: AaProfilComponent },
+    { path: 'aa-home', component: AaHomeComponent },
+    { path: 'aa-aviokompanije', component: AaAviokompanijeComponent },
+    { path: 'aa-letovi', component: AaLetoviComponent },
+    { path: 'aa-aviokompanija', component: AaAviokompanijaComponent },
+    { path: 'aa-let', component: AaLetComponent },
+    { path: 'aa-aviokompanija-uredi', component: AaAviokompanijaUrediComponent },
+    { path: 'aa-let-uredi', component: AaLetUrediComponent },
+
 
 ];

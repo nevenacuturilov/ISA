@@ -9,14 +9,18 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/pocetna-stranica', title: 'Pocetna stranica',  icon: 'pe-7s-science', class: '' },
-    { path: '/korisnik-profil', title: 'Profil',  icon: 'pe-7s-science', class: '' },
+    { path: '/pocetna-stranica', title: 'Pocetna stranica',  icon: 'pe-7s-keypad', class: '' },
+    { path: '/korisnik-profil', title: 'Profil',  icon: 'pe-7s-user', class: '' },
     { path: '/aviokompanije', title: 'Aviokompanije',  icon: 'pe-7s-science', class: '' },
-    { path: '/letovi', title: 'Letovi',  icon: 'pe-7s-science', class: '' },
-    // { path: '/destinacije', title: 'Destinacije',  icon: 'pe-7s-science', class: '' },
-    { path: '/rezervisi', title: 'Rezervisi',  icon: 'pe-7s-science', class: '' },
-    { path: '/hoteli', title: 'Hoteli',  icon: 'pe-7s-science', class: '' },
-    { path: '/hoteli', title: 'Rent-a-car servisi',  icon: 'pe-7s-science', class: '' },
+    { path: '/letovi', title: 'Letovi',  icon: 'pe-7s-plane', class: '' },
+    // { path: '/destinacije', title: 'Destinacije',  icon: 'pe-7s-global', class: '' },
+    { path: '/rezervisi', title: 'Rezervisi',  icon: 'pe-7s-ticket', class: '' },
+    { path: '/hoteli', title: 'Hoteli',  icon: 'pe-7s-culture', class: '' },
+    { path: '/rent-a-car-servisi', title: 'Rent-a-car servisi',  icon: 'pe-7s-car', class: '' },
+    { path: '/prijatelji', title: 'Prijatelji',  icon: 'pe-7s-users', class: '' },
+    { path: '/aa-profil', title: 'AA profil',  icon: 'pe-7s-note2', class: '' },
+    { path: '/aa-home', title: 'AA home',  icon: 'pe-7s-note2', class: '' },
+
     /*{ path: '/dashboard', title: 'Dashboard',  icon: 'pe-7s-graph', class: '' },
     { path: '/user', title: 'User Profile',  icon: 'pe-7s-user', class: '' },
     { path: '/table', title: 'Table List',  icon: 'pe-7s-note2', class: '' },

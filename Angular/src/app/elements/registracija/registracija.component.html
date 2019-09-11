@@ -31,12 +31,15 @@
                                             <input type="text" class="form-control" placeholder="Sifra" [(ngModel)]="korisnik.password" name="password">
                                         </div>
                                 </div>
-                                <!--<div class="col-md-6">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Sifra</label>
-                                        <input type="email" class="form-control" placeholder="Email" >
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input type="email" class="form-control" placeholder="Email" [(ngModel)]="korisnik.email" name="email">
                                     </div>
-                                </div>-->
+                                </div>
                             </div>
 
                             <div class="row">
@@ -108,7 +111,7 @@
 
                           <div class="row">
                             <div class="col-md-6">
-                              <button type="submit" class="btn btn-info btn-fill pull-right">Regustruj se</button>
+                              <button type="button" class="btn btn-info btn-fill pull-right" (click)=registar()>Regustruj se</button>
                               <div class="clearfix"></div>
                             </div>
                           </div>

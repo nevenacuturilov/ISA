@@ -26,7 +26,6 @@ public class LetController {
 
         //upitno da li radi
         return letRepository.findById(id).get();
-
     }
 
     @DeleteMapping("/let/{id}")

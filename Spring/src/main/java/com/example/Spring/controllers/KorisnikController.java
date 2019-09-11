@@ -1,8 +1,12 @@
 package com.example.Spring.controllers;
 
 import com.example.Spring.entities.Korisnik;
+import com.example.Spring.repositories.ConfirmationTokenRepository;
 import com.example.Spring.repositories.KorisnikRepository;
+import com.example.Spring.services.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailException;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,7 +17,13 @@ import java.util.List;
 public class KorisnikController {
 
     @Autowired
+    private MailService mailService;
+
+    @Autowired
     private KorisnikRepository korisnikRepository;
+
+    @Autowired
+    private ConfirmationTokenRepository confirmationTokenRepository;
 
     @GetMapping("/korisnici")
     public List<Korisnik> getKorisnici() {
@@ -26,7 +36,6 @@ public class KorisnikController {
 
         //upitno da li radi
         return korisnikRepository.findById(id).get();
-
     }
 
     @DeleteMapping("/korisnik/{id}")
@@ -39,12 +48,53 @@ public class KorisnikController {
     @PostMapping("/korisnik")
     public Korisnik createKorisnik(@RequestBody Korisnik korisnik) {
 
+        System.out.println("Usaooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+
+        SimpleMailMessage mailMessage = new SimpleMailMessage();
+        mailMessage.setTo(korisnik.getEmail());
+        mailMessage.setFrom("cuturilovnevena@gmail.com");
+        mailMessage.setText("HEEEEEEEEEEEELOOOOOOOOOOOOOO");
+        //mailMessage.setText("To confirm your account, please click here : "
+        //+"http://localhost:8082/confirm-account?token="+confirmationToken.getToken())
+
+        try {
+            mailService.send(mailMessage);
+        } catch (MailException mailException) {
+            System.out.println(mailException);
+        }
+
+
         return korisnikRepository.save(korisnik);
     }
 
     @PutMapping("/korisnik")
-    public Korisnik updateKorisnik(@RequestBody Korisnik korisnik) {
+    public Korisnik updateKorisnik(@RequestBody Korisnik niz) {
 
-        return korisnikRepository.save(korisnik);
+        System.out.println("Usaooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+
+        //Korisnik za = niz[0];
+        //Korisnik od = niz[1];
+
+        System.out.println("Zaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" + niz.getEmail());
+        //System.out.println("Odddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" + od);
+
+        SimpleMailMessage mailMessage = new SimpleMailMessage();
+        mailMessage.setTo(niz.getEmail());
+        mailMessage.setFrom("aplikacija");
+        mailMessage.setText("Dodani ste");
+        //mailMessage.setText("To confirm your account, please click here : "
+        //+"http://localhost:8082/confirm-account?token="+confirmationToken.getToken());
+
+        try {
+            mailService.send(mailMessage);
+            System.out.println("Sendaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+
+        } catch (MailException mailException) {
+            System.out.println(mailException);
+        }
+
+        System.out.println("Pre sevaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        return korisnikRepository.save(niz);
     }
+
 }

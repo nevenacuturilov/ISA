@@ -51,6 +51,10 @@ export class KorisnikService {
   }
 
   updateUser(korisnik: Korisnik) {
+    console.log('servis');
+
+    console.log(korisnik.email);
+
     return this.http.put(this.url + '/korisnik', JSON.stringify(korisnik), this.options)
       .pipe(map((response: Response) => response.json()))
       .pipe(catchError(this.errorHandler));

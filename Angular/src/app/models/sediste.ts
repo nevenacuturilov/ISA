@@ -6,8 +6,12 @@ export class Sediste {
   oznaka: string;
   rezervisano: boolean;
   let: Let;
-  ime: String;
-  prezime: String;
-  brojPasosa: String;
-  boja: String;
+  ime: string;
+  prezime: string;
+  brojPasosa: string;
+  boja: string;
+  tipPuta: string;
+  brojOsoba: number;
+  klasa: string;
+  kolicinaPrtljaga: number;
 }

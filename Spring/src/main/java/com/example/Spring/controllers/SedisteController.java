@@ -26,7 +26,6 @@ public class SedisteController {
 
         //upitno da li radi
         return sedisteRepository.findById(id).get();
-
     }
 
     @DeleteMapping("/sediste/{id}")

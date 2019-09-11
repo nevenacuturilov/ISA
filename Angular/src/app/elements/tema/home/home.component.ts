@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
-import { LegendItem, ChartType } from 'app/lbd/lbd-chart/lbd-chart.component';
+import { LegendItem, ChartType } from 'app/elements/tema/lbd/lbd-chart/lbd-chart.component';
 import * as Chartist from 'chartist';
 
 @Component({

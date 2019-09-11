@@ -1,0 +1,75 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="main-content">
+          <div class="container-fluid">
+            <div class="card">
+              <div class="header">
+                <h2 class="title">Vasi prijatelji</h2>
+              </div>
+              <div class="content table-responsive table-full-width">
+                <table class="table table-hover table-striped">
+                  <!--<thead>
+                      <tr>
+                          <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                      </tr>
+                  </thead>-->
+                  <tbody>
+                    <!--<tr *ngFor="let row of tableData1.dataRows">
+                          <td *ngFor="let cell of row">{{cell}}</td>
+                      </tr>
+                <tr>
+                  <th>Mesto poletanja</th>
+                  <td>{{l.mestoPoletanja}}</td>
+                </tr>-->
+                    <tr>
+                      <td>Prijatelji</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="main-content">
+          <div class="container-fluid">
+            <div class="card">
+              <div class="header">
+                <h2 class="title">Osobe koje mozete dodadti u prijatelje</h2>
+              </div>
+              <div class="content table-responsive table-full-width">
+                <table class="table table-hover table-striped">
+                  <thead>
+                    <tr>
+                      <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let k of korisnici">
+                      <td>{{k.ime}}</td>
+                      <td>{{k.prezime}}</td>
+                      <td>
+                        <div class="row">
+                          <div class="col-md-8">
+                            <button type="button" class="btn btn-secondary" (click)="addFrend(k)">Dodaj</button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

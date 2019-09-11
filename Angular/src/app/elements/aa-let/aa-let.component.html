@@ -1,0 +1,83 @@
+
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="header">
+                      <h4 class="title">Detalji</h4>
+                      <p class="category">Detalji opis</p>
+                  </div>
+                  <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                              <!--<thead>
+                                  <tr>
+                                      <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                  </tr>
+                              </thead>-->
+                              <tbody>
+                                  <!--<tr *ngFor="let row of tableData1.dataRows">
+                                      <td *ngFor="let cell of row">{{cell}}</td>
+                                  </tr>-->
+                                  <tr>
+                                      <th>Mesto poletanja</th>
+                                      <td>{{l.mestoPoletanja}}</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Datum poletanja</th>
+                                      <td>{{l.datumPoletanja}}</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Vreme poletanja</th>
+                                      <td>{{l.vremePoletanja}}</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Mesto sletanja</th>
+                                      <td>{{l.mestoSletanja}}</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Datum sletanja</th>
+                                      <td>{{l.datumSletanja}}</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Vreme sletanja</th>
+                                      <td>{{l.vremeSletanja}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Vreme putovanja</th>
+                                        <td>{{l.vremePutovanja}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Duzina putovanja</th>
+                                        <td>{{l.duzinaPutovanja}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Broj presedanja</th>
+                                        <td>{{l.brojPresedanja}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Lokacije presedanja</th>
+                                        <td>{{l.lokacijePresedanja}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Cena karte</th>
+                                        <td>{{l.cenaKarte}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Aviokompanija</th>
+                                        <td>{{l.aviokompanija}}</td>
+                                      </tr>
+                              </tbody>
+                        </table>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <br>
+
+<button type="button" class="btn btn-dark" (click)="back()">Nazad</button>
+
+</div>
